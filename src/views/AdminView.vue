@@ -1,16 +1,17 @@
 <template>
-    <div class="about">
+    <div class="admin">
       <h1>This is an Admin page　😃</h1>
     </div>
   </template>
   
   <style>
   @media (min-width: 1024px) {
-    .about {
+    .admin {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
+      /* display: flex;
+      align-items: center; */
+      background-color: yellow;
     }
-  }
+}
   </style>
   
