@@ -14,15 +14,21 @@ defineProps<{
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
-  font-family: Moon Dance;
 }
 
 h3 {
   font-size: 1.2rem;
-  font-family: Moon Dance;
+}
+
+.greetings {
+  color: #DF0588;
+  font-family: 'Aref Ruqaa Ink', serif;
+  font-family: 'Moon Dance', cursive;
 }
 
 

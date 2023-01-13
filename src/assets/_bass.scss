@@ -1,0 +1,41 @@
+
+@import "variables";
+//------Click the link and it will move smoothly--------
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.7;
+  width: auto;
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+  }
+  
+  @media (hover: hover) {
+    a:hover {
+      background-color: hsla(297, 67%, 80%, 0.2);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      background-color: orange;
+      /* color:red; */
+    }
+  
+    /* main.tsへと繋がっている */
+    #app {
+      /* display: grid;
+      grid-template-columns: 1fr 1fr; */
+      padding: 0 2rem;
+      background-color: #FFF3DC;
+      text-align: center;
+    }
+  }
