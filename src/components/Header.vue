@@ -2,6 +2,7 @@
 defineProps<{
   msg: string
 }>()
+
 </script>
 
 <template>
@@ -13,8 +14,9 @@ defineProps<{
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
+@import '../assets/styles.scss';
 
 h1 {
   font-weight: 500;
@@ -26,9 +28,10 @@ h3 {
 }
 
 .greetings {
-  color: #DF0588;
-  font-family: 'Aref Ruqaa Ink', serif;
-  font-family: 'Moon Dance', cursive;
+ color:red;
+ color: $main-pink;
+font-family: 'Aref Ruqaa Ink', serif;
+font-family: 'Moon Dance', cursive;
 }
 
 

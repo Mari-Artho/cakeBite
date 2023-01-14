@@ -1,4 +1,4 @@
-@import './base.css';
+/* @import './base.css';
 
 #app {
   max-width: 1280px;
@@ -16,16 +16,12 @@
 @media (min-width: 1024px) {
   body {
     background-color: orange;
-    /* color:red; */
-  }
+  } */
 
   /* main.tsへと繋がっている */
-  #app {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
+  /* #app {
     padding: 0 2rem;
     background-color: #FFF3DC;
     text-align: center;
-    /* color:blue; */
   }
-}
+} */

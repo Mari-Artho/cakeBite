@@ -6,8 +6,6 @@ import Header from './components/Header.vue';
 <template>
   <section>
     <div>
-        
-        
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About us</RouterLink>
@@ -21,7 +19,7 @@ import Header from './components/Header.vue';
   </section>
 </template>
 
-<style scoped>
+<style  lang="scss">
 nav a.router-link-exact-active {
   color: rgb(38, 38, 205);
 }
