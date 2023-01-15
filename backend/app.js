@@ -25,6 +25,15 @@ app.locals.con = mysql.createConnection({
     password: "cafe",
     database: "cafe"
 });
+console.log("Now running at localhost:8889" );
+
+//Test
+app.listen(4000, function(){
+    console.log("Server is working at port 3000");
+})
+app.get("/", function(req,res){
+    res.send(`<h1>Hello Mari from Express!!</h1>`)
+});
 
 module.exports = app;
 
