@@ -27,6 +27,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 
 npm install -D sass-loader sass
+
+backend : npm install mysql2
 ```
 
 ### Compile and Hot-Reload for Development
