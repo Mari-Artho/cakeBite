@@ -2,6 +2,7 @@
     --nav-padding-top: 2vh;
     --border-bottom: 1px dashed black;
     --margin-left: 25%;
+    --color-border: lightgrey ;
   }
   
   //----------COLOR-------------------------------
@@ -13,3 +14,6 @@
   $darkpink: rgb(133, 5, 69);
   $beige: rgb(223, 216, 205);
   $gray: rgba(165, 169, 170, 0.378);
+
+  //Font
+  $main-font: 'Moon Dance', cursive, 'Aref Ruqaa Ink', serif;

@@ -30,8 +30,9 @@ h3 {
 .greetings {
  color:red;
  color: $main-pink;
-font-family: 'Aref Ruqaa Ink', serif;
-font-family: 'Moon Dance', cursive;
+// font-family: 'Aref Ruqaa Ink', serif;
+// font-family: 'Moon Dance', cursive;
+font-family: $main-font;
 }
 
 

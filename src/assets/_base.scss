@@ -20,15 +20,14 @@ body {
   
   @media (hover: hover) {
     a:hover {
-      background-color: hsla(297, 67%, 80%, 0.2);
+      text-decoration: underline;
     }
   }
   
   @media (min-width: 1024px) {
-    body {
-      background-color: orange;
-      /* color:red; */
-    }
+    // body {
+    //   background-color: orange;
+    // }
   
     /* main.tsへと繋がっている */
     #app {
