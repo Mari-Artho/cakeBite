@@ -25,13 +25,15 @@ app.locals.con = mysql.createConnection({
     password: "cafe",
     database: "cafe"
 });
-console.log("Now running at localhost:8889" );
+console.log("Now running at localhost 8889:");
+console.log("Port is: " + app.locals.con.config.port);
 
 //Test
-app.listen(3000, function(){
-    console.log("Server is working at port 3000");
+app.listen(3001, function(){
+    console.log("Server is working at port 3001");
 })
 app.get("/", function(req,res){
+    console.log("Handler for GET /")
     res.send(`<h1>Hello Mari from Express!!</h1>`)
 });
 

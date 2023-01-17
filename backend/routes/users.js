@@ -4,28 +4,22 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  //res.setHeader('content-type', 'text/plain; charset=utf-8');
-  res.writeHead(200, {'content-type': 'text/plain; charset=utf-8'})
+  res.setHeader('content-type', 'text/plain; charset=utf-8');
   //res.send("<html>");
   req.app.locals.con.connect(function(err){
     if(err){
       console.log(err);
     }
-    let adminId = 2;
-    let adminName = "Flore";
-    let cafeId = 2 ;
-    let sql = `INSERT INTO admin(adminId, adminName, cafeId)
-               VALUES("${adminId}", "${adminName}", "${cafeId}")`
+    let sql = `SELECT * FROM admin`
 
     req.app.locals.con.query(sql, function(err, result){
       if(err){
         console.log(err);
       }
-     console.log("rerult", result)
+     console.log("result", result)
+     res.send(result);
     });
-    res.send('respond with a resource');
-    
-    //res.send(result);
+    //res.send('respond with a resource');
   });
 });
 
