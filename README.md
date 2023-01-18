@@ -29,6 +29,8 @@ npm install
 npm install -D sass-loader sass
 
 backend : npm install mysql2
+
+npm start
 ```
 
 ### Compile and Hot-Reload for Development

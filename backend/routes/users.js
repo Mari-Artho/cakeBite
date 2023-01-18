@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.setHeader('content-type', 'text/plain; charset=utf-8');
+  res.setHeader('content-type', 'application/json; charset=utf-8');
   //res.send("<html>");
   req.app.locals.con.connect(function(err){
     if(err){
