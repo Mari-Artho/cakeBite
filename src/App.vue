@@ -1,10 +1,31 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue';
+
+//get data from sql
+import { ref } from 'vue';
+const tasks = ref([]);
+const task = ref('');
+
+const getData = async () => {
+  const response = await fetch('http://localhost:30001/users');
+  const data = await response.json();
+  tasks.value = data;
+};
+
+getData();
 </script>
 
 <template>
   <section>
+  <ul>
+    <li
+      v-for="task in tasks"
+    >
+      <span>Hello {{ task.adminName }}</span>
+    </li>
+  </ul>
+
     <div>
         <nav>
           <RouterLink to="/">Home</RouterLink>
@@ -30,7 +51,6 @@ nav {
   font-family: 'Aref Ruqaa Ink', serif;
   //border: lightgrey .1rem solid ;
   //display :inline-block;
-
 }
 
 nav a.router-link-exact-active {
