@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 var cafeRouter = require('./routes/cafe');
+var cakesRouter = require('./routes/cakes');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/cafe', cafeRouter);
+app.use('/cakes', cakesRouter);
 
 app.locals.con = mysql.createConnection({
     host: "localhost",
