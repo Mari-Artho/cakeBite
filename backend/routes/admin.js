@@ -8,18 +8,18 @@ router.get('/', function(req, res) {
     if(err){
       console.log(err);
     }
-    //let sql = `SELECT * FROM admin`
+    let sql = `SELECT * FROM admin`
 
-    // req.app.locals.con.query(sql, function(err, result){
-    //   if(err){
-    //     console.log(err);
-    //   }
-    //  console.log("result", result)
-    //  res.send(result);
-    // });
+    req.app.locals.con.query(sql, function(err, result){
+      if(err){
+        console.log(err);
+      }
+     console.log("result", result)
+     res.send(result);
+    });
   });
 });
 
-console.log("Now running user.js");
+console.log("Now running admin.js");
 
 module.exports = router;

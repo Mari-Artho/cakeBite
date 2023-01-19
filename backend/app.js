@@ -6,6 +6,7 @@ const mysql = require("mysql2");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var adminRouter = require('./routes/admin');
 
 var app = express();
 
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
 
 app.locals.con = mysql.createConnection({
     host: "localhost",
@@ -25,8 +27,7 @@ app.locals.con = mysql.createConnection({
     password: "cafe",
     database: "cafe"
 });
-console.log("Now running at localhost 8889:");
-console.log("Port is: " + app.locals.con.config.port);
+console.log("Now running at localhost: " + app.locals.con.config.port);
 
 //Test
 app.listen(3001, function(){
