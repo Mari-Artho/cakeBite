@@ -14,10 +14,12 @@ getData();
 <template>
     <div class="home">
       <ul class="cafeList">
-        <!-- <li v-for="(cafe, key )in cafes"  class="cafeList"> -->
           <li v-for="(cafe, key) in cafes" >
-          <span>{{ cafe.cafeId }} {{ cafe.cafeName }}</span>
-        </li>
+            <a href="">
+            <span>{{ cafe.cafeId }} {{ cafe.cafeName }}</span>
+            </a>
+          </li>
+        
       </ul>
     </div>
 </template>
