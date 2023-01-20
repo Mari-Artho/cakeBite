@@ -30,6 +30,8 @@ npm install -D sass-loader sass
 
 backend : npm install mysql2
 
+backend : npm install cors
+
 npm start
 ```
 

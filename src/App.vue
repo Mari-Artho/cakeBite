@@ -4,25 +4,28 @@ import Header from './components/Header.vue';
 
 //get data from sql
 import { ref } from 'vue';
-const tasks = ref([]);
-const task = ref('');
+const admins = ref([]);
+const admin = ref('');
 
 const getData = async () => {
-  const response = await fetch('http://localhost:30001/users');
-  const data = await response.json();
-  tasks.value = data;
+  const response = await fetch('http://localhost:3001/admin');
+  const adminData = await response.json();
+  admins.value = adminData;
 };
 
 getData();
+console.log(admins.value);
+
 </script>
 
 <template>
   <section>
-  <ul>
+  <ul >
     <li
-      v-for="task in tasks"
+      v-for="admin in admins"
     >
-      <span>Hello {{ task.adminName }}</span>
+      <span> {{ admin }}</span>
+   
     </li>
   </ul>
 

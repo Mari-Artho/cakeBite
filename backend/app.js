@@ -40,9 +40,9 @@ console.log("Now running at localhost: " + app.locals.con.config.port);
 app.listen(3001, function(){
     console.log("Server is working at port 3001");
 })
-app.get("/", function(req,res){
-    console.log("Handler for GET /")
-    res.send(`<h1>Hello Mari from Express!!</h1>`)
+app.get("/", function(req, res){
+    let printForm = `<h1>Hello Mari from app.js</h1>`
+    res.send(printForm)
 });
 
 module.exports = app;
