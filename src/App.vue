@@ -1,34 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Header from './components/Header.vue';
-
-//get data from sql
-import { ref } from 'vue';
-const admins = ref([]);
-const admin = ref('');
-
-const getData = async () => {
-  const response = await fetch('http://localhost:3001/admin');
-  const adminData = await response.json();
-  admins.value = adminData;
-};
-
-getData();
-console.log(admins.value);
-
+import Header from './components/Header.vue'
 </script>
 
 <template>
   <section>
-  <ul >
-    <li
-      v-for="admin in admins"
-    >
-      <span> {{ admin }}</span>
-   
-    </li>
-  </ul>
-
     <div>
         <nav>
           <RouterLink to="/">Home</RouterLink>
@@ -47,7 +23,7 @@ console.log(admins.value);
 @import './assets/styles.scss';
 
 nav {
-  font-size: 2rem;
+  font-size: 1.2rem;
   padding: 1rem 0;
   margin-top: 1rem;
   text-align: right;
