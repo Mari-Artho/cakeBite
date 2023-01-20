@@ -1,6 +1,24 @@
+<script setup lang="ts">
+//get data from mySql
+import { ref } from 'vue';
+const cafes = ref([]);
+
+const getData = async () => {
+  const response = await fetch('http://localhost:3001/cafe');
+  const cafeData = await response.json();
+  cafes.value = cafeData;
+};
+getData();
+</script>
+
 <template>
     <div class="home">
-      <h1>This is an home page　</h1>
+      <ul >
+        <li v-for="cafe in cafes">
+          <span> cafe id is: {{ cafe.cafeId }}</span>
+          <span> cafe name is: {{ cafe.cafeName }}</span>
+        </li>
+      </ul>
     </div>
 </template>
   
@@ -8,7 +26,8 @@
 @media (min-width: 1024px) {
 .home {
     min-height: 100vh;
-    background-color: #FFF3DC;
+    background-color: whitesmoke;
+    border-radius: 50% 10% 10% 40%;
 }
 }
 </style>
