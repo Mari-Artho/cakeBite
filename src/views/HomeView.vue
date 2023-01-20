@@ -13,10 +13,10 @@ getData();
 
 <template>
     <div class="home">
-      <ul >
-        <li v-for="cafe in cafes">
-          <span> cafe id is: {{ cafe.cafeId }}</span>
-          <span> cafe name is: {{ cafe.cafeName }}</span>
+      <ul class="cafeList">
+        <!-- <li v-for="(cafe, key )in cafes"  class="cafeList"> -->
+          <li v-for="(cafe, key) in cafes" >
+          <span>{{ cafe.cafeId }} {{ cafe.cafeName }}</span>
         </li>
       </ul>
     </div>
@@ -28,6 +28,13 @@ getData();
     min-height: 100vh;
     background-color: whitesmoke;
     border-radius: 50% 10% 10% 40%;
+}
+
+.cafeList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 300px;
 }
 }
 </style>
