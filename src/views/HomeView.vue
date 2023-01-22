@@ -17,7 +17,7 @@ getCafe();
       <h2 class="greetings">Click on your favorite cafe</h2>
       <ul class="cafeList">
           <li v-for="(cafe, key) in cafes" >
-            <a href="" class="cafe-detail">
+            <a href="http://127.0.0.1:5173/images/strawberry-cake.jpg" class="cafe-detail">
             <span>{{ cafe.cafeName }}</span>
             <span><img :src="`${cafe.cafeImage}`"/></span>
             </a>
@@ -49,6 +49,12 @@ font-family: $main-font;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 300px;
 }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem
 }
 
 .cafe-detail {
