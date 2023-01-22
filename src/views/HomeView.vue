@@ -22,8 +22,9 @@ getCafe();
             <span><img :src="`${cafe.cafeImage}`"/></span>
             </a>
           </li>
-        
       </ul>
+
+      <button>Click here to join us!</button>
     </div>
 </template>
   
@@ -60,5 +61,18 @@ font-family: $main-font;
 img {
   width: 250px;
   height: 200px;
+}
+
+button {
+  background-color: #CC4777;
+  width: 30rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: $main-font;
+  cursor: pointer;
+  &:hover{
+    background-color: $main-pink;
+    color: white;
+  }
 }
 </style>
