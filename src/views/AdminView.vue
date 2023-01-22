@@ -1,14 +1,15 @@
 <script setup lang="ts">
-//get data from mySql
 import { ref } from 'vue';
+
+//get data from mySql
 const admins = ref([]);
 
-const getData = async () => {
+const getAdmin = async () => {
   const response = await fetch('http://localhost:3001/admin');
   const adminData = await response.json();
   admins.value = adminData;
 };
-getData();
+getAdmin();
 </script>
 
 

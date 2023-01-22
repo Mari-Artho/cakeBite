@@ -1,14 +1,15 @@
 <script setup lang="ts">
-//get data from mySql
 import { ref } from 'vue';
+
+//get data from mySql
 const cafes = ref([]);
 
-const getData = async () => {
+const getCafe = async () => {
   const response = await fetch('http://localhost:3001/cafe');
   const cafeData = await response.json();
   cafes.value = cafeData;
 };
-getData();
+getCafe();
 </script>
 
 <template>
@@ -16,7 +17,8 @@ getData();
       <ul class="cafeList">
           <li v-for="(cafe, key) in cafes" >
             <a href="">
-            <span>{{ cafe.cafeId }} {{ cafe.cafeName }}</span>
+            <span>{{ cafe.cafeName }}</span>
+            <img :src="`${cafe.cafeImage}`"/>
             </a>
           </li>
         
