@@ -8,7 +8,8 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
-var cafeRouter = require('./routes/cafes');
+var cafesRouter = require('./routes/cafes');
+var cafeRouter1 = require('./routes/cafe');
 var cakesRouter = require('./routes/cakes');
 
 var app = express();
@@ -24,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
-app.use('/cafes', cafeRouter);
+app.use('/cafes', cafesRouter);
+app.use('/cafe/:id', cafeRouter1);
 app.use('/cakes', cakesRouter);
 
 app.locals.con = mysql.createConnection({
