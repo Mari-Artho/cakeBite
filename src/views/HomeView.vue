@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router'
 
 //get data from mySql
 const cafes = ref([]);
@@ -17,11 +18,11 @@ getCafe();
       <h2 class="greetings">Click on your favorite cafe</h2>
       <ul class="cafeList">
           <li v-for="(cafe, key) in cafes" >
-            <a href="http://127.0.0.1:5173/images/strawberry-cake.jpg" class="cafe-detail">
-            <span>{{ cafe.cafeName }}</span>
-            <span><img :src="`${cafe.cafeImage}`"/></span>
-            </a>
-          </li>
+            <router-link :to="{name:'cafe', params: {text: 'Hello from HomeView'}}">
+              <span>{{ cafe.cafeName }}</span>
+              <span><img :src="`${cafe.cafeImage}`"/></span>
+            </router-link>
+          </li> 
       </ul>
 
       <button>Click here to join us!</button>
