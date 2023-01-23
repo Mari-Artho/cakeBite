@@ -18,7 +18,7 @@ getCafe();
       <h2 class="greetings">Click on your favorite cafe</h2>
       <ul class="cafeList">
           <li v-for="(cafe, key) in cafes" >
-            <router-link :to="{name:'cafe', params: {text: 'Hello from HomeView', id: cafe.cafeId}, query: {id: cafe.cafeId}}">
+            <router-link :to="{name:'cafe', params: {text: 'Hello from HomeView', id: cafe.cafeId}}">
               <span>{{ cafe.cafeName }}</span>
               <span><img :src="`${cafe.cafeImage}`"/></span>
             </router-link>
