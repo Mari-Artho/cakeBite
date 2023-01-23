@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
 const cafes = ref([]);
 
 const getCafe = async () => {
-  const response = await fetch('http://localhost:3001/cafe');
+  const response = await fetch('http://localhost:3001/cafes');
   const cafeData = await response.json();
   cafes.value = cafeData;
 };

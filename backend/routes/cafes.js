@@ -20,6 +20,6 @@ router.get('/', function(req, res) {
   });
 });
 
-console.log("Now running cafe.js");
+console.log("Now running cafes.js");
 
 module.exports = router;
