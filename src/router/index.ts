@@ -23,7 +23,7 @@ const router = createRouter({
       component: AdminView
     },
     {
-      path: '/cafe',
+      path: '/cafe/:id',
       name: 'cafe',
       component: CafeView
     }
