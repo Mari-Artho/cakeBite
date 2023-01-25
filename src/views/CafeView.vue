@@ -30,15 +30,16 @@ getCakes();
             </router-link> > Cafe 
         </h3>
         
-        <h1>{{ $route.params.id }}</h1>
-        <p>Cafe: {{cafe.cafeName}}</p>
+        <h1>{{ $route.params.id }}.  {{cafe.cafeName}}</h1>
         <img :src="`${cafe.cafeImage}`"/>
 
-        <ul v-for="cake in cakes">
-            <li>{{cake.cakeName}}</li>
-            <li>{{ cake.slicesLeft }} Slice left: </li>
-            <li><img :src="`${cake.imageURL}`"/></li>
-        </ul>
+        <div class="cake-details">
+            <ul v-for="cake in cakes" >
+                <li class="cakeName">{{cake.cakeName}}</li>
+                <li><span class="sliceLeft">{{ cake.slicesLeft }} </span>  Slice left: </li>
+                <li><img :src="`${cake.imageURL}`"/></li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -49,7 +50,39 @@ getCakes();
 .cafe {
     min-height: 100vh;
     // background-color: whitesmoke;
-    // border-radius: 50% 10% 10% 40%;
+    //border-radius: 50% 10% 10% 40%;
 }
+
+
+img{
+    width:400px;
+    height: 300px;
+    }
+
+.cake-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+ul {
+    list-style: none;
+    li {
+    background-color: white;
+}
+}
+
+.cakeName {
+    font-size: 1.5rem;
+    font-family: $main-font;
+}
+
+
+
+.sliceLeft {
+    font-size: 2.5rem;
+    color: red;
+}
+
 }
 </style>

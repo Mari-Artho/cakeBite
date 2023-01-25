@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script lang="ts">
     interface Props{
         title: string;
         content: string;
@@ -12,4 +12,4 @@
       <h1>  {{ props.title }}</h1>
       <h1>  {{ props.content }}</h1>
     </div>
-</template>
+</template> -->
