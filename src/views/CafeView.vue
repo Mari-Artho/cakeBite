@@ -5,6 +5,7 @@ import { RouterLink } from 'vue-router'
 
 const route = useRoute();
 const cafe = ref("");
+const cakes = ref([]);
 
 const getCafe = async () => {
   const response = await fetch('http://localhost:3001/cafe/'+ route.params.id);
@@ -12,6 +13,13 @@ const getCafe = async () => {
   cafe.value = cafeData[0];
 };
 getCafe();
+
+const getCakes = async () => {
+  const response = await fetch('http://localhost:3001/cakes/'+ route.params.id);
+  const cakeData = await response.json();
+  cakes.value = cakeData;
+};
+getCakes();
 </script>
 
 <template>
@@ -21,11 +29,16 @@ getCafe();
             BACK 
             </router-link> > Cafe 
         </h3>
-      
         
         <h1>{{ $route.params.id }}</h1>
         <p>Cafe: {{cafe.cafeName}}</p>
         <img :src="`${cafe.cafeImage}`"/>
+
+        <ul v-for=" cake in cakes">
+            <li>CakeName: {{cake.cakeName}}</li>
+            <li>Slice left: {{ cake.slicesLeft }}</li>
+            <li>imageURL: {{ cake.imageURL }}</li>
+        </ul>
     </div>
 </template>
 
