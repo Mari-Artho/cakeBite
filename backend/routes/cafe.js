@@ -7,7 +7,6 @@ console.log("Now running cafe.js");
 
 /* GET users listing. */
 router.get('/cafe/:id', function(req, res) {
-  console.log("+++" + req.params.id);
   let con = req.app.locals.con;
   res.setHeader('content-type', 'application/json; charset=utf-8');
   con.connect(function(err){
@@ -23,7 +22,6 @@ router.get('/cafe/:id', function(req, res) {
         console.log(err);
       }
      console.log("result", result)
-     console.log("params id is:" + req.params.id)
      res.send(result);
     });
   });
