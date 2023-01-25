@@ -2,15 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res) {
+router.get('/cakes/:id', function(req, res) {
+  let con = req.app.locals.con;
   res.setHeader('content-type', 'application/json; charset=utf-8');
-  req.app.locals.con.connect(function(err){
+  con.connect(function(err){
     if(err){
       console.log(err);
     }
-    let sql = `SELECT * FROM cakes`
+    let sql = `SELECT * FROM cakes WHERE cafeId = ?`
+    let query = con.format(sql, [req.params.id]);
 
-    req.app.locals.con.query(sql, function(err, result){
+    con.query(query, function(err, result){
       if(err){
         console.log(err);
       }
