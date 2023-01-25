@@ -34,10 +34,10 @@ getCakes();
         <p>Cafe: {{cafe.cafeName}}</p>
         <img :src="`${cafe.cafeImage}`"/>
 
-        <ul v-for=" cake in cakes">
-            <li>CakeName: {{cake.cakeName}}</li>
-            <li>Slice left: {{ cake.slicesLeft }}</li>
-            <li>imageURL: {{ cake.imageURL }}</li>
+        <ul v-for="cake in cakes">
+            <li>{{cake.cakeName}}</li>
+            <li>{{ cake.slicesLeft }} Slice left: </li>
+            <li><img :src="`${cake.imageURL}`"/></li>
         </ul>
     </div>
 </template>
