@@ -23,6 +23,7 @@ router.get('/cafe/:id', function(req, res) {
         console.log(err);
       }
      console.log("result", result)
+     console.log("params id is:" + req.params.id)
      res.send(result);
     });
   });

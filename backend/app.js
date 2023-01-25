@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/cafes', cafesRouter);
-app.use('/cafe/:id', cafeRouter1);
+app.get('/cafe/:id', cafeRouter1);
 app.use('/cakes', cakesRouter);
 
 app.locals.con = mysql.createConnection({

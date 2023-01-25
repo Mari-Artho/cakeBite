@@ -6,12 +6,12 @@ import TestView from './TestView.vue'
 //get data from mySql
 const cafes = ref([]);
 
-const getCafe = async () => {
+const getCafes = async () => {
   const response = await fetch('http://localhost:3001/cafes');
   const cafeData = await response.json();
   cafes.value = cafeData;
 };
-getCafe();
+getCafes();
 </script>
 
 <template>
