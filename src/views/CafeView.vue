@@ -8,9 +8,7 @@ const cafe = ref("");
 
 const getCafe = async () => {
   const response = await fetch('http://localhost:3001/cafe/'+ route.params.id);
-  console.log(response);
   const cafeData = await response.json();
-  console.log(cafeData);
   cafe.value = cafeData[0];
 };
 getCafe();
