@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import TestView from './TestView.vue'
 
 //get data from mySql
 const cafes = ref([]);
@@ -14,6 +15,8 @@ getCafe();
 </script>
 
 <template>
+  <TestView title="This message from props" content="Hello from props"/>
+  
     <div class="home">
       <h2 class="greetings">Click on your favorite cafe</h2>
       <ul class="cafeList">
@@ -21,7 +24,9 @@ getCafe();
             <router-link :to="{
                           name:'cafe', 
                           params: {text: 'Hello from HomeView', 
-                          id: cafe.cafeId}}">
+                                   id: cafe.cafeId,
+                                   name: cafe.cafeName}
+                          }">
               <span>{{ cafe.cafeName }}</span>
               <span><img :src="`${cafe.cafeImage}`"/></span>
             </router-link>

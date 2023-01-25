@@ -1,19 +1,24 @@
 var express = require('express');
+const req = require('express/lib/request');
 var router = express.Router();
+const mysql = require('mysql2');
+
+console.log("Now running cafe.js");
 
 /* GET users listing. */
-console.log("+++" + router.params.id)
-router.get('/', function(req, res) {
+router.get('/cafe/:id', function(req, res) {
+  console.log("+++" + req.params.id);
+  let con = req.app.locals.con;
   res.setHeader('content-type', 'application/json; charset=utf-8');
-  req.app.locals.con.connect(function(err){
+  con.connect(function(err){
     if(err){
       console.log(err);
     }
 
-    //TODO: below sql, id 
-    let sql = `SELECT * FROM cafe WHERE id=router.params.id`
+    let sql = `SELECT * FROM cafe WHERE cafeId=?`
+    let query = con.format(sql, [req.params.id]);
 
-    req.app.locals.con.query(sql, function(err, result){
+    con.query(query, function(err, result){
       if(err){
         console.log(err);
       }
@@ -22,7 +27,5 @@ router.get('/', function(req, res) {
     });
   });
 });
-
-console.log("Now running cafe.js");
 
 module.exports = router;
