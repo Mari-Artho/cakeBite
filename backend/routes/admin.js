@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
       if(err){
         console.log(err);
       }
-     console.log("result", result)
+     console.log("result in admin.js", result)
      res.send(result);
     });
   });
