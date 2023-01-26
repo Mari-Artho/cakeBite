@@ -9,7 +9,7 @@ import Header from './components/Header.vue'
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About us</RouterLink>
-          <RouterLink to="/admin">Admin</RouterLink>
+          <RouterLink to="/login">Log in</RouterLink>
         </nav>
 
         <Header msg="Cake Bite: How much cake left?" />
@@ -28,8 +28,6 @@ nav {
   margin-top: 1rem;
   text-align: right;
   font-family: 'Aref Ruqaa Ink', serif;
-  //border: lightgrey .1rem solid ;
-  //display :inline-block;
 }
 
 nav a.router-link-exact-active {

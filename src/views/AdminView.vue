@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
+import Login from './LoginView.vue'
 
 //get data from mySql
 const admins = ref([]);
@@ -14,17 +16,7 @@ getAdmin();
 
 <template>
     <div class="admin">
-      <h1>This is an Admin page😃</h1>
-
-      <form>
-        <label for="adminId">Admin Id
-          <input type="number" id="addId" v-model.number="admins.adminId"/>
-        </label>
-        <label for="adminPassword">Password
-          <input type="string" id="addPassword" v-model.string="admins.password"/>
-        </label>
-        <button type="submit">LOG IN</button>
-      </form>
+      <h1>ADMIN</h1>
     
       <ul >
         <li v-for="admin in admins">
