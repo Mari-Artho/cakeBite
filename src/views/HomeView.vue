@@ -29,8 +29,6 @@ getCafes();
             </router-link>
           </li> 
       </ul>
-
-      <button>Click here to join us!</button>
     </div>
 </template>
   
@@ -73,18 +71,5 @@ a {
 img {
   width: 250px;
   height: 200px;
-}
-
-button {
-  background-color: #CC4777;
-  width: 30rem;
-  height: 4rem;
-  font-size: 2rem;
-  font-family: $main-font;
-  cursor: pointer;
-  &:hover{
-    background-color: $main-pink;
-    color: white;
-  }
 }
 </style>

@@ -10,11 +10,15 @@ const getAdmin = async () => {
   admins.value = adminData;
 };
 getAdmin();
+
+function joinBtn(){
+    alert("Thank you! We will get back to you soon! ")
+}
 </script>
 
 <template>
     <div class="login">
-      <h1>This is login view</h1>
+      <h1>Log in</h1>
 
       <form>
         <label for="adminId">Admin Id
@@ -26,11 +30,28 @@ getAdmin();
         <button type="submit">LOG IN</button>
       </form>
     </div>
+
+    <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
 </template>
   
 <style  lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
+@import '../assets/styles.scss';
 @media (min-width: 1024px) {
 
+.joinBtn {
+  background-color: #f6a6c3;
+  width: 20rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: $main-font;
+  margin-top: 3rem;
+  cursor: pointer;
+  &:hover{
+    background-color: $main-pink;
+    color: white;
+  }
+}
 
 }
 </style>
