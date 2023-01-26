@@ -20,6 +20,7 @@ const getCakes = async () => {
   cakes.value = cakeData;
 };
 getCakes();
+
 </script>
 
 <template>
@@ -36,7 +37,8 @@ getCakes();
         <div class="cake-details">
             <ul v-for="cake in cakes" >
                 <li class="cakeName">{{cake.cakeName}}</li>
-                <li><span class="sliceLeft" >{{ cake.slicesLeft }} </span>  Slice left: </li>
+                <li v-show="cake.slicesLeft >= 1 "><span class="sliceLeft" >{{ cake.slicesLeft }} </span> Slices left</li>
+                <li class="soldOut" v-show="cake.slicesLeft < 1 ">SOLD OUT</li>
                 <li><img :src="`${cake.imageURL}`"/></li>
             </ul>
         </div>
@@ -79,10 +81,12 @@ ul {
     font-family: $sub-font;
 }
 
-
-
 .sliceLeft {
     font-size: 2.5rem;
+    color: red;
+}
+
+.soldOut {
     color: red;
 }
 
