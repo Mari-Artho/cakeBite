@@ -11,6 +11,7 @@ var adminRouter = require('./routes/admin');
 var cafesRouter = require('./routes/cafes');
 var cafeRouter1 = require('./routes/cafe');
 var cakesRouter = require('./routes/cakes');
+var loginRouter = require('./routes/login');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/admin', adminRouter);
 app.use('/cafes', cafesRouter);
 app.get('/cafe/:id', cafeRouter1); // need to use app.get to receive params
 app.get('/cakes/:id', cakesRouter);
+app.get('/login', loginRouter);
 
 app.locals.con = mysql.createConnection({
     host: "localhost",
