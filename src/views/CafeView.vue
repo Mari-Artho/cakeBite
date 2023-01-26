@@ -82,12 +82,13 @@ ul {
 }
 
 .sliceLeft {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: red;
 }
 
 .soldOut {
     color: red;
+    font-size: 2rem;
 }
 
 }

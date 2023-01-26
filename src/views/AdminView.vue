@@ -12,10 +12,19 @@ const getAdmin = async () => {
 getAdmin();
 </script>
 
-
 <template>
     <div class="admin">
       <h1>This is an Admin page😃</h1>
+
+      <form>
+        <label for="adminId">Admin Id
+          <input type="number" id="addId" v-model.number="admins.adminId"/>
+        </label>
+        <label for="adminPassword">Password
+          <input type="string" id="addPassword" v-model.string="admins.password"/>
+        </label>
+        <button type="submit">LOG IN</button>
+      </form>
     
       <ul >
         <li v-for="admin in admins">
@@ -31,8 +40,10 @@ getAdmin();
 @media (min-width: 1024px) {
 .admin {
     min-height: 100vh;
-    background-color: rgb(245, 214, 181);
+    // background-color: rgb(245, 214, 181);
+    background-color: rgb(137, 183, 137);
 }
+
 }
 </style>
   
