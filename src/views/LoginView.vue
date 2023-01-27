@@ -57,7 +57,7 @@ const getLogin = async (name: string, password: string) => {
    
 </template>
   
-<style  lang="scss">
+<style scoped  lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
 

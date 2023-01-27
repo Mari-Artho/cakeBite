@@ -17,9 +17,6 @@ getAdmin();
 <template>
     <div class="admin">
       <h1>ADMIN</h1>
-
-  
-    
       <ul >
         <li v-for="admin in admins">
           <span> admin id is: {{ admin.adminId }}</span>
@@ -31,6 +28,8 @@ getAdmin();
 </template>
   
 <style  lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
+@import '../assets/styles.scss';
 @media (min-width: 1024px) {
 .admin {
     min-height: 100vh;

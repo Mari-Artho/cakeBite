@@ -13,10 +13,25 @@ function joinBtn(){
 </template>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
+@import '../assets/styles.scss';
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
     background-color: pink;
   }
+
+  .joinBtn {
+  background-color: #CC4777;
+  width: 30rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: $main-font;
+  cursor: pointer;
+  &:hover{
+    background-color: $main-pink;
+    color: white;
+  }
+}
 }
 </style>
