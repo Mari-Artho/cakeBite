@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-//get data from mySql
 const admin = ref({name: "", password: "", cafeId: 0});
 const cakes = ref([]);
 

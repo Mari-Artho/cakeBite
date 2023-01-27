@@ -8,6 +8,7 @@ router.get('/login/:name/:password', function(req, res) {
     if(err){
       console.log(err);
     }
+    // Check if account with the same user name and password exists in the database
     let sql = `SELECT * FROM admin WHERE adminName = ? AND password = ?`
     let query = con.format(sql, [req.params.name, req.params.password]);
 
@@ -15,6 +16,8 @@ router.get('/login/:name/:password', function(req, res) {
       if(err){
         console.log(err);
       }
+      // only one user name/password pair can match in the DB,
+      // so we use the first (and only) entry
       let login = result[0];
       console.log("result", login)
       if (login === undefined) {
