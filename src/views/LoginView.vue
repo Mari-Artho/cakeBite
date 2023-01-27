@@ -25,8 +25,9 @@ const getLogin = async (name: string, password: string) => {
 </script>
 
 <template>
-    <h1>Admin Login</h1>
+    <h1 v-show="admin.cafeId == 0">Admin Login</h1>
 
+    <!-- LOGIN -->
     <div class="login" v-show="admin.cafeId == 0">
       <form class="loginForm">
         <div class="loginInput">
@@ -38,17 +39,22 @@ const getLogin = async (name: string, password: string) => {
           <input type="password"  id="password" v-model.string="admin.password"/>
         </div>
       </form>
-      <button type="submit" v-on:click="getLogin(admin.name, admin.password)">LOG IN</button>
+      <button class="submitBtn" type="submit" v-on:click="getLogin(admin.name, admin.password)">Login</button>
     </div>
-    <div class="cake-details">
-            <ul v-for="cake in cakes" >
-                <li class="cakeName">{{cake.cakeName}}</li>
-                <li>
-                    <span class="sliceLeft" >{{ cake.slicesLeft }} </span>
-                     Slices left</li>
-                <li><img :src="`${cake.imageURL}`"/></li>
-            </ul>
-        </div>
+
+    <!-- LOGIN SUCCESS -->
+      <h1 v-show="admin.cafeId >0">Admin name : {{ admin.name }}</h1>
+
+      <ul v-for="cake in cakes">
+        <li class="cakeList">{{cake.cakeName}}</li>
+        <li><img :src="`${cake.imageURL}`"/></li>
+        <li class="cakeList">{{ cake.slicesLeft }} slices</li>
+        <button class="countBtn">+</button>
+        <button class="countBtn">-</button>
+      </ul>
+      
+      <button>Logout</button>
+   
 </template>
   
 <style  lang="scss">
@@ -59,13 +65,6 @@ h1,
 .loginForm {
   font-family: $sub-font;
 }
-
-// .login {
-//   width: fit-content;
-//   margin: auto;
-//   margin-bottom: 2rem;
-//   background-color: white;
-// }
 
 .loginInput {
   margin:1rem;
@@ -87,7 +86,33 @@ input {
   height: 1.5rem;
 }
 
-button {
+ul {
+  display: flex;
+  li{
+    width: 15rem;
+    list-style-type: none;
+    text-align: left;
+    border-bottom-style:dotted;
+    border-bottom-width: 1px;
+  }
+}
+
+.cakeList {
+    font-size: 1.2rem;
+}
+
+img {
+  width: 5rem;
+  height: 4rem;
+}
+
+.countBtn{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.submitBtn {
   width: 10rem;
   height: 2rem;
   background-color: $sub-pink;
