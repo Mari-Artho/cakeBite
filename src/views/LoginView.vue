@@ -2,8 +2,8 @@
 import { ref } from 'vue';
 
 //get data from mySql
-const admin = ref({name: "", password: ""});
-const login = ref({name: "", password: ""});
+const admin = ref({name: "", password: ""}); //from the web form
+const login = ref({name: "", password: ""}); //from SQL
 
 const getLogin = async (name: string, password: string) => {
   const response = await fetch('http://localhost:3001/login/' + name + '/' + password);
@@ -21,7 +21,7 @@ const getLogin = async (name: string, password: string) => {
       <form class="loginForm">
         <div class="loginInput">
           <label for="adminName">Admin name</label>
-          <input type="string" id="adminName" v-model.string="admin.adminName"/>
+          <input type="string" id="adminName" v-model.string="admin.name"/>
         </div>
           <!-- <select name="adminName">
             <option value="Sakura" >Sakura</option>
@@ -48,6 +48,13 @@ h1,
 .loginForm {
   font-family: $sub-font;
 }
+
+// .login {
+//   width: fit-content;
+//   margin: auto;
+//   margin-bottom: 2rem;
+//   background-color: white;
+// }
 
 .loginInput {
   margin:1rem;
