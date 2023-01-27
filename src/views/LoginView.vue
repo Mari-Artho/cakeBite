@@ -2,8 +2,7 @@
 import { ref } from 'vue';
 
 //get data from mySql
-const admin = ref({name: "", password: ""}); //from the web form
-const login = ref({name: "", password: "", cafeId: 0}); //from SQL, 0 = none (not logged in)
+const admin = ref({name: "", password: "", cafeId: 0});
 const cakes = ref([]);
 
 const getCakes = async (cafeId: number) => {
@@ -20,16 +19,15 @@ const getLogin = async (name: string, password: string) => {
     return;
   }
   // login is successful
-  login.value = adminData;
   // render a new page with cake data that can be edited
-  getCakes(login.value.cafeId);
+  getCakes(adminData.cafeId);
 };
 </script>
 
 <template>
     <h1>Admin Login</h1>
 
-    <div class="login" v-show="login.cafeId == 0">
+    <div class="login" v-show="admin.cafeId == 0">
       <form class="loginForm">
         <div class="loginInput">
           <label for="adminName">Admin name</label>
