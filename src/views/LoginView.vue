@@ -18,6 +18,7 @@ const getLogin = async (name: string, password: string) => {
     alert ("Invalid login.");
     return;
   }
+  admin.value.cafeId = adminData.cafeId
   // login is successful
   // render a new page with cake data that can be edited
   getCakes(adminData.cafeId);
