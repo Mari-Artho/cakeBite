@@ -39,23 +39,4 @@ const router = createRouter({
   ]
 })
 
-//https://qiita.com/Shiho_anyplus/items/f76422ff3ea03f088b20
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     if (!Store.state.isLogin) {
-//       // 認証されていない時、認証画面へ遷移
-//       next({
-//         path: '/Login',
-//         query: {
-//           redirect: to.fullPath
-//         }
-//       })
-//     } else {
-//       next();
-//     }
-//   } else {
-//     next(); 
-//   }
-// });
-
 export default router

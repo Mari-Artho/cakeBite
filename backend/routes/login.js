@@ -21,20 +21,6 @@ router.get('/login/:name/:password', function(req, res) {
   });
 });
 
-//Test
-// router.post("/login", (req, res)=> {
-//   console.log(query);
-//   let foundUser = query.find((quer)=> {
-//       return quer.adminName == req.body.adminName && quer.password == req.body.password
-//   })
-
-//   if(foundUser){
-      
-//       return res.send("You are now logged in!!")
-//   }
-//   res.send("Fel uppgifter")
-// })
-
 console.log("Now running login.js!");
 
 module.exports = router;
