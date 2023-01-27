@@ -21,36 +21,19 @@ router.get('/login/:name/:password', function(req, res) {
   });
 });
 
-// router.post('/', function(req, res, next) {
-//     console.log(adminId + adminPassword);
-//     if(req.body.adminId == '1' && req.body.adminPassword == 'sakura'){
-//       res.send({
-//         message: 'Login success!'
-//       })
-//     }else{
-//       res.send({
-//         message: 'Please input correct id & password'
-//       })
-//     }
-   
+//Test
+// router.post("/login", (req, res)=> {
+//   console.log(query);
+//   let foundUser = query.find((quer)=> {
+//       return quer.adminName == req.body.adminName && quer.password == req.body.password
 //   })
 
-//Test
-router.post("/login", (req, res)=> {
-  console.log(query);
-  let foundUser = query.find((quer)=> {
-      return quer.adminName == req.body.adminName && quer.password == req.body.password
-  })
-
-  if(foundUser){
+//   if(foundUser){
       
-      return res.send("You are now logged in!!")
-  }
-
-  res.send("Fel uppgifter")
-})
-
-
+//       return res.send("You are now logged in!!")
+//   }
+//   res.send("Fel uppgifter")
+// })
 
 console.log("Now running login.js!");
 

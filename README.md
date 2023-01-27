@@ -5,7 +5,6 @@ This template should help get you started developing with Vue 3 in Vite.
 # Memo
 
 The login password is written in MySQL. Password security is not considered in this project, so 
-
 it is a simple password.
 
 ## Recommended IDE Setup

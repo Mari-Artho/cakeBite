@@ -52,6 +52,7 @@ font-family: $main-font;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 300px;
+  font-family: $sub-font;
 }
 }
 

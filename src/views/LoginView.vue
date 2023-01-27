@@ -2,14 +2,16 @@
 import { ref } from 'vue';
 
 //get data from mySql
-const admins = ref([]);
+const admin = ref({name: "", password: ""});
+const login = ref({name: "", password: ""});
 
-const getAdmin = async () => {
-  const response = await fetch('http://localhost:3001/admin');
+const getLogin = async (name: string, password: string) => {
+  const response = await fetch('http://localhost:3001/login/' + name + '/' + password);
   const adminData = await response.json();
-  admins.value = adminData;
+  login.value = adminData;
+  // todo: check if login is successful (admin == login),
+  // if successful, render a new page with cake data that can be edited
 };
-getAdmin();
 
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
@@ -18,16 +20,25 @@ function joinBtn(){
 
 <template>
     <div class="login">
-      <h1>Log in</h1>
+      <h1>Admin Login</h1>
 
       <form>
-        <label for="adminId">Admin Id
-          <input type="number" id="adminId" v-model.number="admins.adminId"/>
+        <label for="adminName">Admin name
+          <input type="string" id="adminName" v-model.string="admin.adminName"/>
+
+          <!-- <select name="adminName">
+            <option value="Sakura" >Sakura</option>
+            <option value="Flore">Flore</option>
+            <option value="Pause">Pause</option>
+            <option value="Vete-Hunden">Vete-Hunden</option>
+            <option value="Mrs.Cake">Mrs.Cake</option>
+            <option value="Madam">Madam</option>
+          </select> -->
         </label>
         <label for="adminPassword">Password
-          <input type="string" id="adminPassword" v-model.string="admins.password"/>
-        </label>
-        <button type="submit">LOG IN</button>
+            <input type="password"  id="adminPassword" v-model.string="admin.password"/>
+          </label>
+        <button type="submit" v-on:click="getLogin(admin.name, admin.password)">LOG IN</button>
       </form>
     </div>
 
