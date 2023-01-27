@@ -8,8 +8,8 @@ import Header from './components/Header.vue'
     <div>
         <nav>
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About us</RouterLink>
-          <RouterLink to="/login">Log in</RouterLink>
+          <RouterLink to="/about">About CakeBite</RouterLink>
+          <RouterLink to="/login">Admin Login</RouterLink>
         </nav>
 
         <Header msg="Cake Bite: How much cake left?" />

@@ -12,20 +12,17 @@ const getLogin = async (name: string, password: string) => {
   // todo: check if login is successful (admin == login),
   // if successful, render a new page with cake data that can be edited
 };
-
-function joinBtn(){
-    alert("Thank you! We will get back to you soon! ")
-}
 </script>
 
 <template>
+    <h1>Admin Login</h1>
+
     <div class="login">
-      <h1>Admin Login</h1>
-
-      <form>
-        <label for="adminName">Admin name
+      <form class="loginForm">
+        <div class="loginInput">
+          <label for="adminName">Admin name</label>
           <input type="string" id="adminName" v-model.string="admin.adminName"/>
-
+        </div>
           <!-- <select name="adminName">
             <option value="Sakura" >Sakura</option>
             <option value="Flore">Flore</option>
@@ -34,36 +31,64 @@ function joinBtn(){
             <option value="Mrs.Cake">Mrs.Cake</option>
             <option value="Madam">Madam</option>
           </select> -->
-        </label>
-        <label for="adminPassword">Password
-            <input type="password"  id="adminPassword" v-model.string="admin.password"/>
-          </label>
-        <button type="submit" v-on:click="getLogin(admin.name, admin.password)">LOG IN</button>
+        <div class="loginInput">
+          <label for="password">Password </label>
+          <input type="password"  id="password" v-model.string="admin.password"/>
+        </div>
       </form>
+      <button type="submit" v-on:click="getLogin(admin.name, admin.password)">LOG IN</button>
     </div>
-
-    <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
 </template>
   
 <style  lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
-@media (min-width: 1024px) {
+
+h1,
+.loginForm {
+  font-family: $sub-font;
+}
+
+.loginInput {
+  margin:1rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+input {
+  height: 1.5rem;
+}
+
+button {
+  width: 10rem;
+  height: 2rem;
+  background-color: $sub-pink;
+  margin-bottom: 2rem;;
+}
 
 .joinBtn {
-  background-color: #f6a6c3;
-  width: 20rem;
+  background-color: $sub-pink;
+  width: 18rem;
   height: 4rem;
   font-size: 2rem;
   font-family: $main-font;
   margin-top: 3rem;
+  margin-bottom: 2rem;;
   cursor: pointer;
   &:hover{
     background-color: $main-pink;
     color: white;
   }
-}
-
 }
 </style>
   

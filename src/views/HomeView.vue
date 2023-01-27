@@ -20,8 +20,7 @@ getCafes();
           <li v-for="(cafe, key) in cafes" >
             <router-link :to="{
                           name:'cafe', 
-                          params: {text: 'Hello from HomeView', 
-                                   id: cafe.cafeId,
+                          params: {id: cafe.cafeId,
                                    name: cafe.cafeName}
                           }">
               <span>{{ cafe.cafeName }}</span>
@@ -38,8 +37,6 @@ getCafes();
 @media (min-width: 1024px) {
 .home {
     min-height: 100vh;
-    // background-color: whitesmoke;
-    // border-radius: 50% 10% 10% 40%;
 }
 
 .greetings {
@@ -70,7 +67,7 @@ a {
 }
 
 img {
-  width: 250px;
+  width: 300px;
   height: 200px;
 }
 </style>

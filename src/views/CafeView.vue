@@ -37,7 +37,9 @@ getCakes();
         <div class="cake-details">
             <ul v-for="cake in cakes" >
                 <li class="cakeName">{{cake.cakeName}}</li>
-                <li v-show="cake.slicesLeft >= 1 "><span class="sliceLeft" >{{ cake.slicesLeft }} </span> Slices left</li>
+                <li v-show="cake.slicesLeft >= 1 ">
+                    <span class="sliceLeft" >{{ cake.slicesLeft }} </span>
+                     Slices left</li>
                 <li class="soldOut" v-show="cake.slicesLeft < 1 ">SOLD OUT</li>
                 <li><img :src="`${cake.imageURL}`"/></li>
             </ul>
@@ -53,9 +55,8 @@ getCakes();
     min-height: 100vh;
 }
 
-
 img{
-    width:400px;
+    width: 400px;
     height: 300px;
     }
 

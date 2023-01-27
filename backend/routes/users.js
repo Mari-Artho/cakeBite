@@ -8,15 +8,6 @@ router.get('/', function(req, res) {
     if(err){
       console.log(err);
     }
-    //let sql = `SELECT * FROM admin`
-
-    // req.app.locals.con.query(sql, function(err, result){
-    //   if(err){
-    //     console.log(err);
-    //   }
-    //  console.log("result", result)
-    //  res.send(result);
-    // });
   });
 });
 

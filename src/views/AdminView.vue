@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-import Login from './LoginView.vue'
+//import Login from './LoginView.vue'
 
 //get data from mySql
 const admins = ref([]);
@@ -17,6 +17,8 @@ getAdmin();
 <template>
     <div class="admin">
       <h1>ADMIN</h1>
+
+  
     
       <ul >
         <li v-for="admin in admins">
