@@ -3,34 +3,38 @@ import { ref } from 'vue';
 
 //get data from mySql
 const admin = ref({name: "", password: ""}); //from the web form
-const login = ref({name: "", password: ""}); //from SQL
+const login = ref({name: "", password: "", cafeId: 0}); //from SQL, 0 = none (not logged in)
+const cakes = ref([]);
+
+const getCakes = async (cafeId: number) => {
+  const response = await fetch('http://localhost:3001/cakes/'+ cafeId);
+  const cakeData = await response.json();
+  cakes.value = cakeData;
+};
 
 const getLogin = async (name: string, password: string) => {
   const response = await fetch('http://localhost:3001/login/' + name + '/' + password);
   const adminData = await response.json();
+  if (adminData.cafeId == 0) {
+    alert ("Invalid login.");
+    return;
+  }
+  // login is successful
   login.value = adminData;
-  // todo: check if login is successful (admin == login),
-  // if successful, render a new page with cake data that can be edited
+  // render a new page with cake data that can be edited
+  getCakes(login.value.cafeId);
 };
 </script>
 
 <template>
     <h1>Admin Login</h1>
 
-    <div class="login">
+    <div class="login" v-show="login.cafeId == 0">
       <form class="loginForm">
         <div class="loginInput">
           <label for="adminName">Admin name</label>
           <input type="string" id="adminName" v-model.string="admin.name"/>
         </div>
-          <!-- <select name="adminName">
-            <option value="Sakura" >Sakura</option>
-            <option value="Flore">Flore</option>
-            <option value="Pause">Pause</option>
-            <option value="Vete-Hunden">Vete-Hunden</option>
-            <option value="Mrs.Cake">Mrs.Cake</option>
-            <option value="Madam">Madam</option>
-          </select> -->
         <div class="loginInput">
           <label for="password">Password </label>
           <input type="password"  id="password" v-model.string="admin.password"/>
@@ -38,6 +42,15 @@ const getLogin = async (name: string, password: string) => {
       </form>
       <button type="submit" v-on:click="getLogin(admin.name, admin.password)">LOG IN</button>
     </div>
+    <div class="cake-details">
+            <ul v-for="cake in cakes" >
+                <li class="cakeName">{{cake.cakeName}}</li>
+                <li>
+                    <span class="sliceLeft" >{{ cake.slicesLeft }} </span>
+                     Slices left</li>
+                <li><img :src="`${cake.imageURL}`"/></li>
+            </ul>
+        </div>
 </template>
   
 <style  lang="scss">

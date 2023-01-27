@@ -15,8 +15,13 @@ router.get('/login/:name/:password', function(req, res) {
       if(err){
         console.log(err);
       }
-     console.log("result", result)
-     res.send(result[0]);
+      let login = result[0];
+      console.log("result", login)
+      if (login === undefined) {
+        res.send({name: "", password: "", cafeId: 0});
+      } else {
+        res.send(login);
+      }
     });
   });
 });
