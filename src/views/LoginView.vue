@@ -49,8 +49,12 @@ const getLogin = async (name: string, password: string) => {
         <li class="cakeList">{{cake.cakeName}}</li>
         <li><img :src="`${cake.imageURL}`"/></li>
         <li class="cakeList">{{ cake.slicesLeft }} slices</li>
-        <button class="countBtn">+</button>
-        <button class="countBtn">-</button>
+        <input type="number" id="numberCake" v-model.string="cake.slicesLeft"/>
+        <button class="saveBtn" type="submit" v-on:click="updateCakes(cake.slicesLeft)">SAVE</button>
+
+
+        <!-- <button class="countBtn">+</button>
+        <button class="countBtn">-</button> -->
       </ul>
       
       <button>Logout</button>
