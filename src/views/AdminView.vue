@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-//import Login from './LoginView.vue'
 
 //get data from mySql
 const admins = ref([]);
