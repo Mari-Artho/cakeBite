@@ -26,12 +26,15 @@ font-family: $main-font;
 display: grid;
 opacity: 10;
 grid-template-columns: 1fr 6fr;
-background-color: white;
+background-color: rgba(208, 195, 195, 0.624);
+border-radius: 0% 0% 50% 50%;
 }
 
 img {
-  height: 200px;
-  border-radius: 20%;;
+  height: 150px;
+  border-radius: 50%;
+  padding: 1rem;
+  padding-left: 3rem;
 }
 
 @media (min-width: 1024px) {
