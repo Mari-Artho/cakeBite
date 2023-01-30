@@ -23,9 +23,15 @@ const getLogin = async (name: string, password: string) => {
   getCakes(adminData.cafeId);
 };
 
-//test
+//update 
 const updateCakes = (slices) => {
-  cakes.value.push({ licesLeft: slices.value});
+  if(slices <0){
+    alert("Input more than 0");
+    return;
+  }
+  console.log("Hello Mari");
+  
+  //cakes.value.push({ slicesLeft: slices.value});
 };
 
 </script>

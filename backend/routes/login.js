@@ -35,7 +35,7 @@ router.get('/login/:name/:password', function(req, res) {
 
 //update
 router.post('/cakes/:id', function(req, res) {
-  let con = req.app.locals.con;
+  let con = res.app.locals.con;
   console.log(con);
   res.setHeader('content-type', 'application/json; charset=utf-8');
   con.connect(function(err) {
@@ -47,7 +47,9 @@ router.post('/cakes/:id', function(req, res) {
       con.query(query, function(err, result) {
           if (err) {
               console.log(err)
+          res.send(result);
           }
+          
       })
   })
 })
