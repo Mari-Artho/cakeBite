@@ -7,6 +7,8 @@ This template should help get you started developing with Vue 3 in Vite.
 The login password is written in MySQL. Password security is not considered in this project, so 
 it is a simple password.
 
+<div>Logo is <a href="https://www.designevo.com/jp/" title="free online logo maker">DesignEvo</a> by logo maker</div>
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

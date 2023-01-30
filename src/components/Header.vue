@@ -6,6 +6,7 @@ defineProps<{
 
 <template>
   <div class="greetings">
+    <img src="../../public/images/logo.png" alt="cafeBite logo"/>
     <h1 class="green">{{ msg }}</h1>
   </div>
 </template>
@@ -20,10 +21,17 @@ h1 {
 }
 
 .greetings {
- color: $main-pink;
-// font-family: 'Aref Ruqaa Ink', serif;
-// font-family: 'Moon Dance', cursive;
+color: $main-pink;
 font-family: $main-font;
+display: grid;
+opacity: 10;
+grid-template-columns: 1fr 6fr;
+background-color: white;
+}
+
+img {
+  height: 200px;
+  border-radius: 20%;;
 }
 
 @media (min-width: 1024px) {
