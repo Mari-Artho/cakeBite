@@ -22,6 +22,12 @@ const getLogin = async (name: string, password: string) => {
   // render a new page with cake data that can be edited
   getCakes(adminData.cafeId);
 };
+
+//test
+const updateCakes = (slices) => {
+  cakes.value.push({ licesLeft: slices.value});
+};
+
 </script>
 
 <template>

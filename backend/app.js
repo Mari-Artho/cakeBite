@@ -44,7 +44,7 @@ console.log("Now running at localhost: " + app.locals.con.config.port);
 app.listen(3001, function(){
     console.log("Server is working at port 3001");
 })
-app.get("/", function(req, res){
+app.get("/admin", function(req, res){
     let printForm = `<h1>Hello Mari from app.js</h1>`
     res.send(printForm)
 });

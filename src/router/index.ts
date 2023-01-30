@@ -24,7 +24,7 @@ const router = createRouter({
       component: LoginView
     },
     {
-      path: '/admin:id',
+      path: '/admin',
       name: 'admin',
       component: AdminView,
       meta: {
