@@ -30,30 +30,6 @@ router.get('/login/:name/:password', function(req, res) {
   });
 });
 
-//from MySQL
-//UPDATE `cakes` SET `slicesLeft` = '20' WHERE `cakes`.`cakeId` = 1; 
-
-//update
-router.post('/cakes/:id', function(req, res) {
-  let con = res.app.locals.con;
-  console.log(con);
-  res.setHeader('content-type', 'application/json; charset=utf-8');
-  con.connect(function(err) {
-      if (err) {
-          console.log(err)
-      }
-      let sql = `UPDATE cakes SET slicesLeft = ? WHERE cakes.cakeId = ?`;
-      let query = con.format(sql, [req.params.slicesLeft]);
-      con.query(query, function(err, result) {
-          if (err) {
-              console.log(err)
-          res.send(result);
-          }
-          
-      })
-  })
-})
-
 console.log("Now running login.js!");
 
 module.exports = router;

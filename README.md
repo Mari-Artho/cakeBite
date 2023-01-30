@@ -33,6 +33,8 @@ npm install
 
 npm install -D sass-loader sass
 
+npm install axios
+
 backend : npm install mysql2
 
 backend : npm install cors
