@@ -24,13 +24,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-//app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/cafes', cafesRouter);
 app.get('/cafe/:id', cafeRouter1); // need to use app.get to receive params
 app.get('/cakes/:id', cakesRouter);
-//to update slice of cakes.
-app.put('/cakes/:id/:slices', cakesRouter);
+app.put('/cakes/:id/:slices', cakesRouter);//to update slice of cakes
 app.get('/login/:name/:password', loginRouter);
 
 app.locals.con = mysql.createConnection({

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET cake by cafeId. */
 router.get('/cakes/:id', function(req, res) {
   let con = req.app.locals.con;
   res.setHeader('content-type', 'application/json; charset=utf-8');
@@ -22,13 +22,9 @@ router.get('/cakes/:id', function(req, res) {
   });
 });
 
-//from MySQL
-//UPDATE `cakes` SET `slicesLeft` = '20' WHERE `cakes`.`cakeId` = 1; 
-
-//update
+//Update 
 router.put('/cakes/:id/:slices', function(req, res) {
   let con = req.app.locals.con;
-  console.log("con is: " + con);
   res.setHeader('content-type', 'application/json; charset=utf-8');
   con.connect(function(err) {
       if (err) {
@@ -39,7 +35,7 @@ router.put('/cakes/:id/:slices', function(req, res) {
       con.query(query, function(err, result) {
           if (err) {
               console.log(err)
-          res.send("update result is: " + result);
+          res.send(result);
           }
       })
   })
