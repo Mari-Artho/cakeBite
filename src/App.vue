@@ -28,7 +28,6 @@ nav {
   margin-top: 1rem;
   text-align: right;
   font-family: 'Aref Ruqaa Ink', serif;
-  color: $text-grey;
 }
 
 nav a.router-link-exact-active {
@@ -37,7 +36,7 @@ nav a.router-link-exact-active {
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
-  border-bottom: black;
+  border-bottom: $text-grey;
   text-decoration: underline;
 }
 
@@ -45,7 +44,7 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   text-decoration: none;
-  color: black;
+  color:  $text-grey;
   border-left: 1px solid var(--color-border);
 }
 

@@ -41,7 +41,9 @@ const updateCakes = (cakeId: number, slicesLeft: number) => {
       })
 }
 
-
+const modalOpen = ()=> {
+  alert("Saved!!")
+}
 
 </script>
 
@@ -67,14 +69,11 @@ const updateCakes = (cakeId: number, slicesLeft: number) => {
       <h1 v-show="admin.cafeId >0">Admin name : {{ admin.name }}</h1>
 
       <ul v-for="cake in cakes">
-        <li>{{cake.cakeId}}</li>
         <li class="cakeList">{{cake.cakeName}}</li>
         <li><img :src="`${cake.imageURL}`"/></li>
         <li class="cakeList">{{ cake.slicesLeft }} slices</li>
-        <input type="number" id="numberCake" v-model.string="cake.slicesLeft"/>
-        <button class="saveBtn" type="submit"  v-on:click="updateCakes(cake.cakeId, cake.slicesLeft)">SAVE</button>
-        <!-- <button class="countBtn">+</button>
-        <button class="countBtn">-</button> -->
+        <input class="input" type="number" id="numberCake" v-model.string="cake.slicesLeft"/>
+        <button class="saveBtn" type="submit" v-on:click="updateCakes(cake.cakeId, cake.slicesLeft), modalOpen()">SAVE</button>
       </ul>
       
       <button v-show="admin.cafeId >0">Logout</button>
@@ -106,8 +105,16 @@ label {
   margin-right: 1rem;
 }
 
-input {
-  height: 1.5rem;
+.input {
+  display: inline-block;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.5em;
+  border: 1px solid $text-grey;
+  box-sizing: border-box;
+  background: $main-beige;
+  margin: 1rem;
+  border-radius: 10px;
 }
 
 ul {
@@ -130,17 +137,28 @@ img {
   height: 4rem;
 }
 
-.countBtn{
-  width: 3rem;
-  height: 3rem;
-  margin-right: 1rem;
+.saveBtn{
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  padding: 0.5em;
+  border: 1px solid $text-grey;
+  box-sizing: border-box;
+  background: $main-beige;
+  margin: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover{
+    opacity: .7;
+  }
 }
 
 .submitBtn {
-  width: 10rem;
-  height: 2rem;
+  width: 11rem;
+  height: 3rem;
   background-color: $sub-pink;
   margin-bottom: 2rem;;
+  cursor: pointer;
 }
 
 .joinBtn {

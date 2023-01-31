@@ -16,7 +16,6 @@ defineProps<{
 @import '../assets/styles.scss';
 
 h1 {
-  //font-weight: 500;
   font-size: 2rem;
 }
 
@@ -39,13 +38,5 @@ img {
   height: 150px;
   border-radius: 50%;
   padding: 1rem;
-  //padding-left: 1rem;
-}
-
-@media (min-width: 1024px) {
-  /* .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  } */
 }
 </style>
