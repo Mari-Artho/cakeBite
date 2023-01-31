@@ -15,15 +15,15 @@ getCafes();
 
 <template>
     <div class="home">
-      <h2 class="greetings">Click on your favorite cafe</h2>
+      <h2 class="message">Click on your favorite cafe</h2>
       <ul class="cafeList">
-          <li v-for="(cafe, key) in cafes" >
+          <li v-for="cafe in cafes" >
             <router-link :to="{
                           name:'cafe', 
                           params: {id: cafe.cafeId,
                                    name: cafe.cafeName}
                           }">
-              <span>{{ cafe.cafeName }}</span>
+              <span class="cafeName">{{ cafe.cafeName }}</span>
               <span><img :src="`${cafe.cafeImage}`"/></span>
             </router-link>
           </li> 
@@ -36,12 +36,17 @@ getCafes();
 @import '../assets/styles.scss';
 @media (min-width: 1024px) {
 .home {
-    min-height: 100vh;
+  min-height: 100vh;
+  color: $text-grey;
 }
 
-.greetings {
-color: $main-pink;
-font-family: $main-font;
+.message {
+  font-family: $main-font;
+  margin: 3rem 0 3rem 0;
+}
+
+.cafeName {
+  color: $text-grey;
 }
 
 .cafeList {

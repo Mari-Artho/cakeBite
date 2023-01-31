@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <div class="greetings">
     <img src="../../public/images/logo.png" alt="cafeBite logo"/>
-    <h1 class="green">{{ msg }}</h1>
+    <h1><span class="title">{{ msg }} </span><br/>How much cake left?</h1>
   </div>
 </template>
 
@@ -16,8 +16,13 @@ defineProps<{
 @import '../assets/styles.scss';
 
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
+  //font-weight: 500;
+  font-size: 2rem;
+}
+
+.title {
+  font-family: $sub-font;
+  font-size: 3rem;
 }
 
 .greetings {
@@ -25,8 +30,8 @@ color: $main-pink;
 font-family: $main-font;
 display: grid;
 opacity: 10;
-grid-template-columns: 1fr 6fr;
-background-color: rgba(208, 195, 195, 0.624);
+grid-template-columns: 1fr 6fr 1fr;
+background-color:$main-beige;
 border-radius: 0% 0% 50% 50%;
 }
 
@@ -34,7 +39,7 @@ img {
   height: 150px;
   border-radius: 50%;
   padding: 1rem;
-  padding-left: 3rem;
+  //padding-left: 1rem;
 }
 
 @media (min-width: 1024px) {

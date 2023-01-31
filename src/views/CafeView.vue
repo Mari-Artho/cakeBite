@@ -53,6 +53,7 @@ getCakes();
 @media (min-width: 1024px) {
 .cafe {
     min-height: 100vh;
+    color: $text-grey;
 }
 
 img{
