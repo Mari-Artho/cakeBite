@@ -31,7 +31,7 @@ getAdmin();
 @import '../assets/styles.scss';
 @media (min-width: 1024px) {
 .admin {
-    min-height: 100vh;
+    min-height: 150vh;
     // background-color: rgb(245, 214, 181);
     background-color: rgb(137, 183, 137);
 }

@@ -87,6 +87,12 @@ const modalOpen = ()=> {
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
 
+.login {
+  //min-height: 80vh;
+  margin: 3rem;
+  //background: white;
+}
+
 h1,
 .loginForm {
   font-family: $sub-font;
