@@ -76,7 +76,10 @@ const modalOpen = ()=> {
         <button class="saveBtn" type="submit" v-on:click="updateCakes(cake.cakeId, cake.slicesLeft), modalOpen()">SAVE</button>
       </ul>
       
-      <button v-show="admin.cafeId >0">Logout</button>
+      <router-link v-bind:to="{name:'home'}">
+        <button v-show="admin.cafeId >0">Logout</button>
+      </router-link>
+      
    
 </template>
   

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRoute } from "vue-router"
-import { RouterLink } from 'vue-router'
+import { useRoute, RouterLink} from "vue-router"
 
 const route = useRoute();
 const cafe = ref("");
