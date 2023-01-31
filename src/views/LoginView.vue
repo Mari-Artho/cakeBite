@@ -77,7 +77,7 @@ const modalOpen = ()=> {
       </ul>
       
       <router-link v-bind:to="{name:'home'}">
-        <button v-show="admin.cafeId >0">Logout</button>
+        <button v-show="admin.cafeId >0" class="logoutBtn">Logout</button>
       </router-link>
       
    
@@ -140,7 +140,7 @@ img {
   height: 4rem;
 }
 
-.saveBtn{
+.saveBtn, .logoutBtn{
   display: inline-block;
   width: 4rem;
   height: 2rem;
