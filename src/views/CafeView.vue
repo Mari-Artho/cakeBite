@@ -6,6 +6,7 @@ const route = useRoute();
 const cafe = ref("");
 const cakes = ref([]);
 
+//Get a cafe data
 const getCafe = async () => {
   const response = await fetch('http://localhost:3001/cafe/'+ route.params.id);
   const cafeData = await response.json();
@@ -13,6 +14,7 @@ const getCafe = async () => {
 };
 getCafe();
 
+//Get a cake data
 const getCakes = async () => {
   const response = await fetch('http://localhost:3001/cakes/'+ route.params.id);
   const cakeData = await response.json();
@@ -31,7 +33,17 @@ getCakes();
         </h3>
         
         <h1 class="cafeName">{{ $route.params.id }}.  {{cafe.cafeName}}</h1>
-        <img :src="`${cafe.cafeImage}`"/>
+
+        <div class="cafeInfo">
+            <div class="cafeInfo-left">
+                <img :src="`${cafe.cafeImage}`" alt="cafe image" class="cafeImage"/>
+            </div>
+            <div class="cafeInfo-right">
+                <p>{{ cafe.cafeAddress }}</p>
+                <p>{{ cafe.openhourWeekday }}</p>
+                <p>{{ cafe.openhourWeekend}}</p>
+            </div>
+        </div>
 
         <div class="cake-details">
             <ul v-for="cake in cakes" >
@@ -59,6 +71,28 @@ img{
     width: 400px;
     height: 300px;
     }
+
+.cafeImage {
+    border-radius: 40% 70% 0% 70%/ 60%;
+    //border-radius: 60%/ 60%;
+}
+
+.cafeInfo {
+    display: flex;
+    justify-content: space-evenly;
+    //background-color:white;
+}
+
+.cafeInfo-left{
+    //background-color: blue;
+}
+
+.cafeInfo-right{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    //background-color: $sub-pink;
+    padding: 1rem;
+}
 
 .cake-details {
     display: grid;
