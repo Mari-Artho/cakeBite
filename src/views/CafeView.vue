@@ -27,18 +27,19 @@ getCakes();
 <template>
     <div class="cafe">
         <h3>
-            <router-link v-bind:to="{name:'home'}">
-            BACK 
-            </router-link> > Cafe 
+            <router-link v-bind:to="{name:'home'}" class="homeRouter">
+              Home 
+            </router-link>  > {{ $route.params.id }}.  {{cafe.cafeName}}
         </h3>
         
-        <h1 class="cafeName">{{ $route.params.id }}.  {{cafe.cafeName}}</h1>
+        <!-- <h1 class="cafeName">{{ $route.params.id }}.  {{cafe.cafeName}}</h1> -->
 
         <div class="cafeInfo">
             <div class="cafeInfo-left">
                 <img :src="`${cafe.cafeImage}`" alt="cafe image" class="cafeImage"/>
             </div>
             <div class="cafeInfo-right">
+                <h1 class="cafeName"> {{cafe.cafeName}}</h1>
                 <p>{{ cafe.cafeAddress }}</p>
                 <p>{{ cafe.openhourWeekday }}</p>
                 <p>{{ cafe.openhourWeekend}}</p>
@@ -67,6 +68,11 @@ getCakes();
     color: $text-grey;
 }
 
+.homeRouter {
+    color: $main-pink;
+    font-family: $sub-font;
+}
+
 img{
     width: 400px;
     height: 300px;
@@ -89,8 +95,7 @@ img{
 
 .cafeInfo-right{
     font-size: 1.2rem;
-    margin-top: 3rem;
-    //background-color: $sub-pink;
+    margin-top: 1rem;
     padding: 1rem;
 }
 
