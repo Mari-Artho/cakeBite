@@ -91,10 +91,6 @@ const modalOpen = ()=> {
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
 
-// .login {
-//   margin: 3rem;
-// }
-
 h1,
 .loginForm {
   font-family: $sub-font;
@@ -145,7 +141,7 @@ ul {
 
 .cakeDetail {
   :last-child {
-    border-bottom-style:  dotted;
+    border-bottom-style: dotted;
     border-bottom-width: 1px;
   }
 }
@@ -168,15 +164,7 @@ img {
 
 .saveBtn, .logoutBtn{
   display: inline-block;
-  width: 4rem;
-  height: 2rem;
-  padding: 0.5em;
-  border: 1px solid $text-grey;
-  box-sizing: border-box;
-  background: $main-beige;
-  margin: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
+  @include smallBtn;
   &:hover{
     opacity: .7;
   }
@@ -202,21 +190,6 @@ img {
   font-family: $sub-font;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.joinBtn {
-  background-color: $sub-pink;
-  width: 18rem;
-  height: 4rem;
-  font-size: 2rem;
-  font-family: $main-font;
-  margin-top: 3rem;
-  margin-bottom: 2rem;;
-  cursor: pointer;
-  &:hover{
-    background-color: $main-pink;
-    color: white;
-  }
 }
 </style>
   

@@ -1,0 +1,11 @@
+@mixin smallBtn {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.5em;
+  border: 1px solid $text-grey;
+  box-sizing: border-box;
+  background: $main-beige;
+  margin: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
