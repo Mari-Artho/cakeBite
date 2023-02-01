@@ -66,15 +66,17 @@ const modalOpen = ()=> {
     </div>
 
     <!-- LOGIN SUCCESS -->
-      <h1 v-show="admin.cafeId >0">Admin name : {{ admin.name }}</h1>
+      <h1 v-show="admin.cafeId >0" class="adminName">Admin name : {{ admin.name }}</h1>
 
-      <ul v-for="cake in cakes">
-        <li class="cakeList">{{cake.cakeName}}</li>
-        <li><img :src="`${cake.imageURL}`"/></li>
-        <li class="cakeList">{{ cake.slicesLeft }} slices</li>
-        <input class="input" type="number" id="numberCake" v-model.string="cake.slicesLeft"/>
-        <button class="saveBtn" type="submit" v-on:click="updateCakes(cake.cakeId, cake.slicesLeft), modalOpen()">SAVE</button>
-      </ul>
+      <div class="cakeDetail">
+        <ul v-for="cake in cakes" >
+          <li class="cakeList">{{cake.cakeName}}</li>
+          <li><img :src="`${cake.imageURL}`"/></li>
+          <li class="cakeList">{{ cake.slicesLeft }} slices</li>
+          <input class="input" type="number" id="numberCake" v-model.string="cake.slicesLeft"/>
+          <button class="saveBtn" type="submit" v-on:click="updateCakes(cake.cakeId, cake.slicesLeft), modalOpen()">SAVE</button>
+        </ul>
+      </div>
       
       <router-link v-bind:to="{name:'home'}">
         <button v-show="admin.cafeId >0" class="logoutBtn">Logout</button>
@@ -88,18 +90,25 @@ const modalOpen = ()=> {
 @import '../assets/styles.scss';
 
 .login {
-  //min-height: 80vh;
   margin: 3rem;
-  //background: white;
 }
 
 h1,
 .loginForm {
   font-family: $sub-font;
+  color: $text-grey;
+}
+
+.adminName {
+  border-bottom: double 3px $text-grey;
+  width: fit-content;
+  padding: .5rem;
+  margin: 2rem;
+
 }
 
 .loginInput {
-  margin:1rem;
+  margin: 1rem;
 }
 
 .loginForm {
@@ -128,17 +137,26 @@ label {
 
 ul {
   display: flex;
-  li{
-    width: 15rem;
-    list-style-type: none;
-    text-align: left;
-    border-bottom-style:dotted;
+  border-top-style:  dotted;
+  border-top-width: 1px;
+}
+
+.cakeDetail {
+  :last-child {
+    border-bottom-style:  dotted;
     border-bottom-width: 1px;
   }
 }
 
+li{
+  width: 15rem;
+  list-style-type: none;
+  text-align: left;
+  padding: 1rem;
+}
+
 .cakeList {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 img {

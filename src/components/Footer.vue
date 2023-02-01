@@ -16,13 +16,17 @@ defineProps<{
                 <li>Email: cafebite@daisuki.se</li>
             </ul>
 
-            <ul class="sms-icon">
-                <li><img src="../../public/images/instagram.svg" /></li>
-                <li><img src="../../public/images/facebook.svg" /></li>
-                <li><img src="../../public/images/tiktok.svg" /></li>
-                <li><img src="../../public/images/pinterest.svg" /></li>
-                <li><img src="../../public/images/youtube.svg" /></li>
-            </ul>
+            <div>
+                <h3>Join us!</h3>
+                <ul class="sms-icon">
+                    <li><img src="../../public/images/instagram.svg" /></li>
+                    <li><img src="../../public/images/facebook.svg" /></li>
+                    <li><img src="../../public/images/tiktok.svg" /></li>
+                    <li><img src="../../public/images/pinterest.svg" /></li>
+                    <li><img src="../../public/images/youtube.svg" /></li>
+                </ul>
+            </div>
+            
         </div>
     </section>
     
