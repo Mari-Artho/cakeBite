@@ -52,17 +52,19 @@ const modalOpen = ()=> {
 
     <!-- LOGIN -->
     <div class="login" v-show="admin.cafeId == 0">
-      <form class="loginForm">
-        <div class="loginInput">
-          <label for="adminName">Admin name</label>
-          <input type="string" id="adminName" v-model.string="admin.name"/>
-        </div>
-        <div class="loginInput">
-          <label for="password">Password </label>
-          <input type="password"  id="password" v-model.string="admin.password"/>
-        </div>
-      </form>
-      <button class="submitBtn" type="submit" v-on:click="getLogin(admin.name, admin.password)">Login</button>
+      <div class="loginField">
+        <form class="loginForm">
+          <div class="loginInput">
+            <label for="adminName">Admin name</label>
+            <input type="string" id="adminName" v-model.string="admin.name"/>
+          </div>
+          <div class="loginInput">
+            <label for="password">Password </label>
+            <input type="password"  id="password" v-model.string="admin.password"/>
+          </div>
+        </form>
+        <button class="loginBtn" type="submit" v-on:click="getLogin(admin.name, admin.password)">Login</button>
+      </div>
     </div>
 
     <!-- LOGIN SUCCESS -->
@@ -89,9 +91,9 @@ const modalOpen = ()=> {
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
 
-.login {
-  margin: 3rem;
-}
+// .login {
+//   margin: 3rem;
+// }
 
 h1,
 .loginForm {
@@ -180,11 +182,25 @@ img {
   }
 }
 
-.submitBtn {
+.loginField {
+  background-color: white;
+  min-height: 250px;
+  width: 400px;
+  padding: 2rem;
+  margin: auto;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+.loginBtn {
   width: 11rem;
   height: 3rem;
-  background-color: $sub-pink;
-  margin-bottom: 2rem;;
+  background-color: $third-pink;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  font-family: $sub-font;
+  font-size: 1rem;
   cursor: pointer;
 }
 

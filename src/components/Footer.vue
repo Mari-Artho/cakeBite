@@ -17,7 +17,7 @@ defineProps<{
             </ul>
 
             <div>
-                <h3>Join us!</h3>
+                <h3>Follow us!</h3>
                 <ul class="sms-icon">
                     <li><img src="../../public/images/instagram.svg" /></li>
                     <li><img src="../../public/images/facebook.svg" /></li>
