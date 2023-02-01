@@ -6,7 +6,18 @@ function joinBtn(){
 
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Our story</h1>
+    <article>
+      One day, Mari, the founder of the CakeBite went to her favorite cake shop in Stockholm.
+       She wanted to eat strawberry shortcake there. Unfortunately, the cake was sold out.
+       <br/>
+       The next time, this time the matcha milk crepe was sold out. At the time, She thought, "I want to know the inventory of the cakes before going to the store.
+       Wouldn't it be nice if people could do that?”
+       This was the moment CakeBite was born.
+    </article>
+    <img src="../../public/images/cream-puffs.jpg"/>
+    <p></p>
+
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
   </div>
@@ -18,7 +29,13 @@ function joinBtn(){
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
-    background-color: pink;
+    color: $text-grey;
+  }
+
+  article {
+    width: 700px;
+    margin: auto;
+    font-size: 1.5rem;
   }
 
   .joinBtn {

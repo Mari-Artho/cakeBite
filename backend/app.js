@@ -6,7 +6,6 @@ const mysql = require("mysql2");
 const cors = require('cors');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 var cafesRouter = require('./routes/cafes');
 var cafeRouter1 = require('./routes/cafe');
