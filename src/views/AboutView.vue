@@ -1,7 +1,7 @@
 <script  setup lang="ts">
 import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
@@ -66,23 +66,21 @@ const photoGallery = ref([
 
       <template #addons>
         <Navigation />
-        <Pagination />
       </template>
     </Carousel>
   
     <h1>How to use the CakeBite</h1>
     <article class="howTo">
-      If you were the owner, you would prepare the cake first thing in the morning, right? Log in from admin and register the number of cakes. That's all!
+      If you were the owner, you may prepare the cake first thing in the morning. Log in from admin and register the number of cakes. That's all!
       If you bake a cake during the day, register the amount that increased.<br/>
-      Also, since the store's cash register and our database are connected, the number of slices sold is automatically subtracted. Easy, right?
+      Also, since the store's cash register and our database are connected, the number of slices sold is automatically subtracted. Easy, isn't it?
     </article>
 
-    <h1>Our business</h1>
+    <h1>Our service</h1>
     <article class="howTo">
       Our service is not limited to just stocking cakes.
-      For example, if you have a take-out for lunch boxes,
-      a pizza shop, a bakery, or other restaurant, join us!<br/>
-      Our services continue to expand. Look forward to SemlaBite, BulleBite, LusseKaBite!
+      For example, if you have a take-out for lunch boxes, a bakery, or other restaurant, join us!<br/>
+      Our services continue to expand. Look forward to SemlaBite, BulleBite, LussekatterBite!
     </article>
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
@@ -143,52 +141,13 @@ blockquote::after {
   font-size: 1.2rem;
 }
 
+// Arrows on the left and right of the carousel
 .carousel__prev,
 .carousel__next {
-  background-color: white;
-  border-radius: 90%;;
-}
-
-.carousel__pagination {
-  list-style: none;
-}
-
-//ボタンの外側
-.carousel__pagination-item {
-  //display: none;
-  //list-style:none;
-  //background-color: white;
-  //border-radius: 50%;
-  //list-style-type: circle;
-  //list-style-type: none;
-  //display:block;
-  //padding: .5rem;
-  
-}
-
-//ボタンの内側
-.carousel__pagination-button {
-  background: $third-pink;
-  color: $sub-pink;
-  // width: 10px;
-  // height: 10px;
-  border-radius: 90%;
-  border: 1px solid $third-pink;
-  margin: 1rem;
-  //outline: none;
-  //transition: 3s;
-  cursor: pointer;
-  //list-style: none;
-  padding: 1.5rem;
-  //pointer-events: none;
-  //text-decoration:none;
-
- 
-}
-
-//ボタンがアクティブの時
-.carousel__pagination-button--active {
   background-color: $sub-pink;
+  border-radius: 90%;
+  width: 3rem;
+  height: 3rem;
 }
 
 .sliderPhoto {
