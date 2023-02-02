@@ -4,12 +4,13 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 const photoGallery = ref([
-                  {photo:"../../public/images/maria.jpg"},
-                  {photo:"../../public/images/cafe-madam.jpg"},
-                  {photo:"../../public/images/eclair.jpg"},
-                  {photo:"../../public/images/logo.png"},
-                  {photo:"../../public/images/orange-tart.jpg"},
-                  {photo:"../../public/images/mrs.cake.jpg"},
+                  {photo:"../../public/images/user1.jpg"},
+                  {photo:"../../public/images/user2.jpg"},
+                  {photo:"../../public/images/user3.jpg"},
+                  {photo:"../../public/images/user4.jpg"},
+                  {photo:"../../public/images/user5.jpg"},
+                  {photo:"../../public/images/user6.jpg"},
+                  {photo:"../../public/images/user7.jpg"},
                   ])
 
 function joinBtn(){
@@ -113,6 +114,7 @@ blockquote::after {
   border-radius: 10%;
 }
 
+// TO DO
 .carousel__pagination-button {
   list-style:circle;
   color: red;
@@ -120,8 +122,8 @@ blockquote::after {
 
 .sliderPhoto {
   background:$third-pink;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   border-radius: 10%;
 }
 
