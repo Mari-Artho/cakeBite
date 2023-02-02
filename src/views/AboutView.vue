@@ -1,15 +1,16 @@
-<script  lang="ts">
+<script  setup lang="ts">
+import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-export default {
-  name: 'App',
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
-  },
-}
+
+const photoGallery = ref([
+                  {photo:"../../public/images/maria.jpg"},
+                  {photo:"../../public/images/cafe-madam.jpg"},
+                  {photo:"../../public/images/eclair.jpg"},
+                  {photo:"../../public/images/maria.jpg"},
+                  {photo:"../../public/images/cafe-madam.jpg"},
+                  {photo:"../../public/images/eclair.jpg"},
+                  ])
 
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
@@ -38,21 +39,27 @@ function joinBtn(){
     </div>
 
     <h1>User's voice</h1>
-    <carousel :items-to-show="1.5">
-      <slide v-for="slide in 8" :key="slide">
-        <div class="carousel__item">Hello{{ slide }} Hejhej</div>
-      </slide>
 
-      <template #addons="{ slidesCount }">
-        <navigation />
-        <pagination />
+    <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
+      <Slide v-for="slide in photoGallery" :key="slide" class="carousel-item">
+        <div class="sliderPhoto">
+          <img
+          
+          v-bind:src="slide.photo"
+          />
+          <p>Hello Mari</p>
+        </div>
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+        <Pagination />
       </template>
-    </carousel>
-
+    </Carousel>
+  
     <h1>How to use the CafeBite</h1>
 
     <h1>Our business</h1>
-
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
   </section>
@@ -101,10 +108,21 @@ blockquote::after {
   margin-top: 2rem;
 }
 
-.carousel__item {
-  height:400px;
-  width: 500px;
-  background: pink;
+.carousel-item {
+  height:300px;
+  width: 800px;
+  background: red;
+}
+
+.sliderPhoto {
+  width: 700px;
+  background: blue;
+  margin: 2rem;
+  padding:2rem;
+}
+
+img {
+  width: 1000px;
 }
 
 .joinBtn {
@@ -118,7 +136,6 @@ margin: 2rem;
 border-radius: 1rem;
 cursor: pointer;
 &:hover{
-  //background-color: rgb(246, 71, 100);
   background: linear-gradient($main-pink, white);
   color: white;
 }

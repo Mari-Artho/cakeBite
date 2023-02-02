@@ -37,7 +37,9 @@ npm install -D sass-loader sass
 
 npm install axios
 
-npm install vue3-carousel
+# npm install vue3-carousel
+
+npm install element-plus --save
 
 backend : npm install mysql2
 

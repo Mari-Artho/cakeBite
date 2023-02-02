@@ -40,13 +40,13 @@ app.locals.con = mysql.createConnection({
 console.log("Now running at localhost: " + app.locals.con.config.port);
 
 //Test
-app.listen(3001, function(){
-    console.log("Server is working at port 3001");
-})
-app.get("/admin", function(req, res){
-    let printForm = `<h1>Hello Mari from app.js</h1>`
-    res.send(printForm)
-});
+// app.listen(3001, function(){
+//     console.log("Server is working at port 3001");
+// })
+// app.get("/admin", function(req, res){
+//     let printForm = `<h1>Hello Mari from app.js</h1>`
+//     res.send(printForm)
+// });
 
 module.exports = app;
 
