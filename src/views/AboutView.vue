@@ -7,9 +7,9 @@ const photoGallery = ref([
                   {photo:"../../public/images/maria.jpg"},
                   {photo:"../../public/images/cafe-madam.jpg"},
                   {photo:"../../public/images/eclair.jpg"},
-                  {photo:"../../public/images/maria.jpg"},
-                  {photo:"../../public/images/cafe-madam.jpg"},
-                  {photo:"../../public/images/eclair.jpg"},
+                  {photo:"../../public/images/logo.png"},
+                  {photo:"../../public/images/orange-tart.jpg"},
+                  {photo:"../../public/images/mrs.cake.jpg"},
                   ])
 
 function joinBtn(){
@@ -19,6 +19,7 @@ function joinBtn(){
 
 <template>
   <section class="about">
+    <!-- Our story -->
     <h1>Our story</h1>
     <div class="ourStory">
       <article>
@@ -38,22 +39,20 @@ function joinBtn(){
       </article>
     </div>
 
+    <!-- User's voice -->
     <h1>User's voice</h1>
 
-    <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
-      <Slide v-for="slide in photoGallery" :key="slide" class="carousel-item">
+    <Carousel :itemsToShow="2" :wrapAround="true" :transition="500">
+      <Slide v-for="slide in photoGallery" :key="slide">
         <div class="sliderPhoto">
-          <img
-          
-          v-bind:src="slide.photo"
-          />
+          <img v-bind:src="slide.photo" class="carousel-item-img" />
           <p>Hello Mari</p>
         </div>
       </Slide>
 
       <template #addons>
         <Navigation />
-        <Pagination />
+        <Pagination  />
       </template>
     </Carousel>
   
@@ -108,22 +107,24 @@ blockquote::after {
   margin-top: 2rem;
 }
 
-.carousel-item {
-  height:300px;
-  width: 800px;
-  background: red;
+.carousel-item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.carousel__pagination-button {
+  list-style:circle;
+  color: red;
 }
 
 .sliderPhoto {
-  width: 700px;
-  background: blue;
+  background:$third-pink;
   margin: 2rem;
-  padding:2rem;
+  padding: 2rem;
+  border-radius: 10%;
 }
 
-img {
-  width: 1000px;
-}
 
 .joinBtn {
 background-color: $main-pink;
