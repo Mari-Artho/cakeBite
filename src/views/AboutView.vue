@@ -55,7 +55,7 @@ const photoGallery = ref([
     <!-- User's voice -->
     <h1>User's voice</h1>
 
-    <Carousel :itemsToShow="2" :wrapAround="true" :transition="500">
+    <Carousel :itemsToShow="2" :wrapAround="true" :transition="500" :mouseDrag="true">
       <Slide v-for="slide in photoGallery" :key="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
@@ -66,7 +66,7 @@ const photoGallery = ref([
 
       <template #addons>
         <Navigation />
-        <Pagination  />
+        <Pagination />
       </template>
     </Carousel>
   
@@ -82,16 +82,17 @@ const photoGallery = ref([
       Our service is not limited to just stocking cakes.
       For example, if you have a take-out for lunch boxes,
       a pizza shop, a bakery, or other restaurant, join us!<br/>
-      Our services continue to expand. Look forward to PizzaBite, BreadBite, KebabsBite!
+      Our services continue to expand. Look forward to SemlaBite, BulleBite, LusseKaBite!
     </article>
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss"> // Unscoped to enable vue-paginate
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
+
 @media (min-width: 1024px) {
 .about {
   min-height: 100vh;
@@ -142,14 +143,56 @@ blockquote::after {
   font-size: 1.2rem;
 }
 
-// TO DO
+.carousel__prev,
+.carousel__next {
+  background-color: white;
+  border-radius: 90%;;
+}
+
+.carousel__pagination {
+  list-style: none;
+}
+
+//ボタンの外側
+.carousel__pagination-item {
+  //display: none;
+  //list-style:none;
+  //background-color: white;
+  //border-radius: 50%;
+  //list-style-type: circle;
+  //list-style-type: none;
+  //display:block;
+  //padding: .5rem;
+  
+}
+
+//ボタンの内側
 .carousel__pagination-button {
-  list-style:circle;
-  color: red;
+  background: $third-pink;
+  color: $sub-pink;
+  // width: 10px;
+  // height: 10px;
+  border-radius: 90%;
+  border: 1px solid $third-pink;
+  margin: 1rem;
+  //outline: none;
+  //transition: 3s;
+  cursor: pointer;
+  //list-style: none;
+  padding: 1.5rem;
+  //pointer-events: none;
+  //text-decoration:none;
+
+ 
+}
+
+//ボタンがアクティブの時
+.carousel__pagination-button--active {
+  background-color: $sub-pink;
 }
 
 .sliderPhoto {
-  background:$third-pink;
+  background: $third-pink;
   margin: 1rem;
   padding: 1rem;
   border-radius: 10%;
@@ -159,7 +202,6 @@ blockquote::after {
   width: 90vh;
   margin: auto;
 }
-
 
 .joinBtn {
 background-color: $main-pink;
