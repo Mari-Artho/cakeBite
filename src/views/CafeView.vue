@@ -25,7 +25,7 @@ getCakes();
 </script>
 
 <template>
-    <div class="cafe">
+    <section class="cafe">
         <h3>
             <router-link v-bind:to="{name:'home'}" class="homeRouter">
               Home 
@@ -56,7 +56,7 @@ getCakes();
                 <li><img :src="`${cake.imageURL}`"/></li>
             </ul>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped lang="scss">

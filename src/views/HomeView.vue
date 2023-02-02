@@ -14,7 +14,7 @@ getCafes();
 </script>
 
 <template>
-    <div class="home">
+    <section class="home">
       <h2 class="message">Click on your favorite cafe</h2>
       <ul class="cafeList">
           <li v-for="cafe in cafes" >
@@ -28,7 +28,7 @@ getCafes();
             </router-link>
           </li> 
       </ul>
-    </div>
+    </section>
 </template>
   
 <style scoped lang="scss">
