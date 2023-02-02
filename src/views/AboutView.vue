@@ -81,7 +81,8 @@ const photoGallery = ref([
     <article class="howTo">
       Our service is not limited to just stocking cakes.
       For example, if you have a take-out for lunch boxes,
-      a pizza shop, a bakery, or other restaurant, join us!
+      a pizza shop, a bakery, or other restaurant, join us!<br/>
+      Our services continue to expand. Look forward to PizzaBite, BreadBite, KebabsBite!
     </article>
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
