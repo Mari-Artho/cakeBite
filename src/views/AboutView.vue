@@ -158,7 +158,7 @@ blockquote::after {
 }
 
 .howTo {
-  width: 90vh;
+  width: 70%;
   margin: auto;
 }
 
