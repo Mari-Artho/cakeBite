@@ -9,13 +9,13 @@ function joinBtn(){
 
 const photoGallery = ref([
                   {photo:"../../public/images/user1.jpg", 
-                   text: "I'm busy to take care of my three children and working, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
+                   text: "I'm busy working and taking care of my three children, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user2.jpg",
-                   text: "I live in a suburb area, so I'm happy to be able to check in advance at a cafe. I hope there will be more shops. So 4 stars.", 
+                   text: "I live in a suburb, so I'm happy to be able to check a cafe in advance. I hope there will be more shops. So 4 stars.", 
                    stars:"⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user3.jpg",
-                    text: "I am raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. Go and cry if it's sold out! That's why I'm grateful for the CakeBite job", stars:"⭐️⭐️⭐️⭐️⭐️"},
+                    text: "I am raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. I go and cry if it's sold out! That's why I'm grateful for CakeBite.", stars:"⭐️⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user4.jpg",
                    text: "I Love CakeBite! Absolutely!", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
@@ -25,7 +25,7 @@ const photoGallery = ref([
                    text: "CakeBite? Damn good!", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user7.jpg",
-                   text: "I'm vegan, so I always eat the same cake from the same cafe. That's why I love being able to check in advance on the CakeBite", 
+                   text: "I'm vegan, so I always eat the same cake from the same cafe. That's why I love being able to check in advance on CakeBite.", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
                   ])
 </script>
@@ -43,7 +43,7 @@ const photoGallery = ref([
         Wouldn't it be nice if people could do that?"
         This was the moment CakeBite was born.
         <blockquote>
-          <i> Where there is a will, there is a way.  <br/>Abraham Lincoln </i>
+          <i>Where there is a will, there is a way.<br/>Abraham Lincoln</i>
         </blockquote>
       </article>
       
@@ -72,15 +72,16 @@ const photoGallery = ref([
   
     <h1>How to use the CakeBite</h1>
     <article class="howTo">
-      If you were the owner, you would prepare the cake first thing in the morning, right? Log in from admin and register the number of cakes. that's all!
+      If you were the owner, you would prepare the cake first thing in the morning, right? Log in from admin and register the number of cakes. That's all!
       If you bake a cake during the day, register the amount that increased.<br/>
-      Also, since the store's cash register and our database are connected, the number of sales is automatically subtracted. Easy, right?
+      Also, since the store's cash register and our database are connected, the number of slices sold is automatically subtracted. Easy, right?
     </article>
 
     <h1>Our business</h1>
     <article class="howTo">
       Our service is not limited to just stocking cakes.
-      for example, blablabla
+      For example, if you have a take-out for lunch boxes,
+      a pizza shop, a bakery, or other restaurant, join us!
     </article>
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>

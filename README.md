@@ -37,7 +37,7 @@ npm install -D sass-loader sass
 
 npm install axios
 
-# npm install vue3-carousel
+# for the slide-show plug-in:
 
 npm install element-plus --save
 
