@@ -1,4 +1,16 @@
-<script setup lang="ts">
+<script  lang="ts">
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+export default {
+  name: 'App',
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+}
+
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
 }
@@ -17,17 +29,25 @@ function joinBtn(){
         This was the moment CakeBite was born.
         <blockquote>
           <i> Where there is a will, there is a way.  <br/>Abraham Lincoln </i>
-         
         </blockquote>
       </article>
       
       <article>
-        <img src="../../public/images/maria.jpg" alt="our story" class="ourStory-img" />
-        
+        <img src="../../public/images/maria.jpg" alt="Maria's image" class="ourStory-img" />
       </article>
     </div>
 
-    <h1>Customer's voice</h1>
+    <h1>User's voice</h1>
+    <carousel :items-to-show="1.5">
+      <slide v-for="slide in 8" :key="slide">
+        <div class="carousel__item">Hello{{ slide }} Hejhej</div>
+      </slide>
+
+      <template #addons="{ slidesCount }">
+        <navigation />
+        <pagination />
+      </template>
+    </carousel>
 
     <h1>How to use the CafeBite</h1>
 
@@ -79,6 +99,12 @@ blockquote::after {
   height: 22rem;
   border-radius: 1rem;
   margin-top: 2rem;
+}
+
+.carousel__item {
+  height:400px;
+  width: 500px;
+  background: pink;
 }
 
 .joinBtn {
