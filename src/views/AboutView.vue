@@ -3,19 +3,31 @@ import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-const photoGallery = ref([
-                  {photo:"../../public/images/user1.jpg"},
-                  {photo:"../../public/images/user2.jpg"},
-                  {photo:"../../public/images/user3.jpg"},
-                  {photo:"../../public/images/user4.jpg"},
-                  {photo:"../../public/images/user5.jpg"},
-                  {photo:"../../public/images/user6.jpg"},
-                  {photo:"../../public/images/user7.jpg"},
-                  ])
-
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
 }
+
+const photoGallery = ref([
+                  {photo:"../../public/images/user1.jpg", 
+                   text: "I'm busy to take care of my three children and working, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
+                   stars:"⭐️⭐️⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user2.jpg",
+                   text: "I live in a suburb area, so I'm happy to be able to check in advance at a cafe. I hope there will be more shops. So 4 stars.", 
+                   stars:"⭐️⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user3.jpg",
+                    text: "I am raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. Go and cry if it's sold out! That's why I'm grateful for the CakeBite job", stars:"⭐️⭐️⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user4.jpg",
+                   text: "I Love CakeBite! Absolutely!", 
+                   stars:"⭐️⭐️⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user5.jpg",
+                   text: "I'm a travel writer, so I'm always checking out trendy shops. That's why I want CakeBite to post shops around the world!", stars:"⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user6.jpg",
+                   text: "CakeBite? Damn good!", 
+                   stars:"⭐️⭐️⭐️⭐️⭐️"},
+                  {photo:"../../public/images/user7.jpg",
+                   text: "I'm vegan, so I always eat the same cake from the same cafe. That's why I love being able to check in advance on the CakeBite", 
+                   stars:"⭐️⭐️⭐️⭐️⭐️"},
+                  ])
 </script>
 
 <template>
@@ -47,7 +59,8 @@ function joinBtn(){
       <Slide v-for="slide in photoGallery" :key="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
-          <p>Hello Mari</p>
+          <p class="usersComment">{{ slide.text}}</p>
+          <p>{{ slide.stars }}</p>
         </div>
       </Slide>
 
@@ -57,9 +70,18 @@ function joinBtn(){
       </template>
     </Carousel>
   
-    <h1>How to use the CafeBite</h1>
+    <h1>How to use the CakeBite</h1>
+    <article class="howTo">
+      If you were the owner, you would prepare the cake first thing in the morning, right? Log in from admin and register the number of cakes. that's all!
+      If you bake a cake during the day, register the amount that increased.<br/>
+      Also, since the store's cash register and our database are connected, the number of sales is automatically subtracted. Easy, right?
+    </article>
 
     <h1>Our business</h1>
+    <article class="howTo">
+      Our service is not limited to just stocking cakes.
+      for example, blablabla
+    </article>
 
     <button class="joinBtn" v-on:click="joinBtn()">Click here to join us!</button>
   </section>
@@ -114,6 +136,10 @@ blockquote::after {
   border-radius: 10%;
 }
 
+.usersComment {
+  font-size: 1.2rem;
+}
+
 // TO DO
 .carousel__pagination-button {
   list-style:circle;
@@ -125,6 +151,11 @@ blockquote::after {
   margin: 1rem;
   padding: 1rem;
   border-radius: 10%;
+}
+
+.howTo {
+  width: 90vh;
+  margin: auto;
 }
 
 
