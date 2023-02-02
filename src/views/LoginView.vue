@@ -28,9 +28,8 @@ const getLogin = async (name: string, password: string) => {
 
 //Log out
 const getLogout = async () => {
-  const response = await fetch('http://localhost:3001/login/');
-  const adminData = await response.json();
-  admin.value.cafeId = adminData.cafeId
+  cakes.value = [];
+  admin.value.cafeId = 0
 };
 
 //Update cakes
@@ -87,12 +86,8 @@ const modalOpen = ()=> {
         </ul>
       </div>
       
-      <router-link v-bind:to="{name:'home'}">
-        <button v-show="admin.cafeId >0" class="logoutBtn">Logout</button>
-      </router-link>
-      <!-- <button v-show="admin.cafeId >0" class="logoutBtn" v-on:click="getLogout()">Logout</button> -->
-      
-   
+      <button v-show="admin.cafeId >0" class="logoutBtn" v-on:click="getLogout()">Logout</button>
+
 </template>
   
 <style scoped  lang="scss">
