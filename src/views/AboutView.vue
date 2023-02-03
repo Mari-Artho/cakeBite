@@ -206,40 +206,40 @@ margin: auto;
 
 //----------Mobile(iPhone SE) Landscape-----------------
 @media screen and (min-width:481px) and ( max-width:809px)  {
-  .ourStory{
-    display: flex;
-    flex-direction: column;
-  }
+.ourStory{
+  display: flex;
+  flex-direction: column;
+}
 
-  .ourStory-img {
-    margin-left: 10%;
+.ourStory-img {
+  margin-left: 10%;
 }
 }
 
 //----------Tablet & Mobile(iPhone11) Landscape------------------------------
 @media screen and (min-width:810px)  and ( max-width:1080px)  {
-  .ourStory{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .ourStory-img {
-    width: 40rem;
-    height: 30rem;
-    border-radius: 1rem;
-    margin-left: 6%;
+.ourStory{
+  display: flex;
+  flex-direction: column;
 }
 
-  .joinBtn {
-  margin-bottom: 1rem;;
-  }
+.ourStory-img {
+  width: 40rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin-left: 6%;
+}
+
+.joinBtn {
+margin-bottom: 1rem;;
+}
 }
 
 //----------Tablet Landscape------------------------------
 @media screen and (min-width: 1080px)  {
-  .ourStory-img {
-    width: 50rem;
-    height: 40rem;
+.ourStory-img {
+  width: 50rem;
+  height: 40rem;
 }
 }
 </style>

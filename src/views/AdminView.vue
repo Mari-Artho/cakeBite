@@ -34,25 +34,5 @@ getAdmin();
     // background-color: rgb(245, 214, 181);
     background-color: rgb(137, 183, 137);
 }
-
-//----------Mobile-------------------------
-@media screen and ( max-width:480px) {
-
-}
-
-//----------Mobile(iPhone SE) Landscape-----------------
-@media screen and (min-width:481px) and ( max-width:809px)  {
-
-}
-
-//----------Tablet & Mobile(iPhone11) Landscape------------------------------
-@media screen and (min-width:810px)  and ( max-width:1080px)  {
-  
-}
-
-//----------Tablet Landscape------------------------------
-@media screen and (min-width: 1080px)  {
-  
-}
 </style>
   
