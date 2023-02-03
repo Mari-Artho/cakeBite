@@ -53,7 +53,7 @@ getCakes();
                     <span class="sliceLeft" >{{ cake.slicesLeft }} </span>
                      Slices left</li>
                 <li class="soldOut" v-show="cake.slicesLeft < 1 ">SOLD OUT</li>
-                <li><img :src="`${cake.imageURL}`"/></li>
+                <li><img :src="`${cake.imageURL}`" class="cakeImg"/></li>
             </ul>
         </div>
     </section>
@@ -62,7 +62,6 @@ getCakes();
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
-@media (min-width: 1024px) {
 .cafe {
     min-height: 100vh;
     color: $text-grey;
@@ -80,13 +79,11 @@ img{
 
 .cafeImage {
     border-radius: 40% 70% 0% 70%/ 60%;
-    //border-radius: 60%/ 60%;
 }
 
 .cafeInfo {
     display: flex;
     justify-content: space-evenly;
-    //background-color:white;
 }
 
 .cafeInfo-right{
@@ -127,5 +124,57 @@ ul {
     font-size: 2rem;
 }
 
+//----------Mobile-------------------------
+@media screen and ( max-width:480px) {
+.cafeInfo {
+    flex-direction: column;
+}
+
+.cafeImage {
+    width: 18rem;
+    height: 15rem;
+}
+
+.cake-details {
+    grid-template-columns: 1fr;
+    margin: auto;
+    width: 280px;
+    border-radius: 10px;
+}
+
+.cakeImg {
+    width: 220px;
+    height: 150px;
+}
+}
+
+//----------Mobile(iPhone SE) Landscape-----------------
+@media screen and (min-width:481px) and ( max-width:809px)  {
+.cafeInfo {
+    flex-direction: column;
+}
+
+.cake-details {
+    grid-template-columns: 1fr 1fr;
+    width: 550px;
+    border-radius: 10px;
+}
+
+.cakeName {
+    font-size: 1rem;
+}
+
+.cakeImg {
+    width: 150px;
+    height: 115px;
+}
+}
+
+//----------Tablet & Mobile(iPhone11) Landscape------------------------------
+@media screen and (min-width:810px)  and ( max-width:1080px)  {
+.cakeImg {
+    width: 300px;
+    height: 200px;
+}
 }
 </style>

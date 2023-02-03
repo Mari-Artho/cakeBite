@@ -242,6 +242,4 @@ margin: auto;
     height: 40rem;
 }
 }
-
-
 </style>
