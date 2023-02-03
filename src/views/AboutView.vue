@@ -53,7 +53,7 @@ const photoGallery = ref([
     </div>
 
     <!-- User's voice -->
-    <h1>User's voice</h1>
+    <h1 class="usersVoice">User's voice</h1>
 
     <Carousel :itemsToShow="2" :wrapAround="true" :transition="500" :mouseDrag="true">
       <Slide v-for="slide in photoGallery" :key="slide">
@@ -150,9 +150,14 @@ blockquote::after {
   height: 3rem;
 }
 
+.usersVoice {
+  margin: 0;
+}
+
 .sliderPhoto {
   background: $third-pink;
   margin: 1rem;
+  margin-top: 0;
   padding: 1rem;
   border-radius: 10%;
 }
