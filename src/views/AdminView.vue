@@ -26,16 +26,33 @@ getAdmin();
     </div>
 </template>
   
-<style  lang="scss">
+<style scoped  lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
-@media (min-width: 1024px) {
 .admin {
     min-height: 150vh;
     // background-color: rgb(245, 214, 181);
     background-color: rgb(137, 183, 137);
 }
 
+//----------Mobile-------------------------
+@media screen and ( max-width:480px) {
+
+}
+
+//----------Mobile(iPhone SE) Landscape-----------------
+@media screen and (min-width:481px) and ( max-width:809px)  {
+
+}
+
+//----------Tablet & Mobile(iPhone11) Landscape------------------------------
+@media screen and (min-width:810px)  and ( max-width:1080px)  {
+  
+}
+
+//----------Tablet Landscape------------------------------
+@media screen and (min-width: 1080px)  {
+  
 }
 </style>
   

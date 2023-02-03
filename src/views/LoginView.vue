@@ -194,5 +194,34 @@ img {
   font-size: 1rem;
   cursor: pointer;
 }
+
+//----------Mobile-------------------------
+@media screen and ( max-width:480px) {
+.loginField {
+  width: 250px;
+}
+
+label {
+  text-align: left;
+}
+}
+
+ul {
+  flex-direction: column;
+}
+
+//----------Mobile(iPhone SE) Landscape-----------------
+@media screen and (min-width:481px) and ( max-width:809px)  {
+ul {
+  flex-direction: row;
+}
+}
+
+//----------Tablet & Mobile(iPhone11) Landscape------------------------------
+@media screen and (min-width:810px)  and ( max-width:1080px)  {
+ul {
+  flex-direction: row;
+}
+}
 </style>
   
