@@ -55,7 +55,7 @@ const photoGallery = ref([
     <!-- User's voice -->
     <h1 class="usersVoice">User's voice</h1>
 
-    <Carousel :itemsToShow="2" :wrapAround="true" :transition="500" :mouseDrag="true">
+    <Carousel :itemsToShow="1.3" :wrapAround="true" :transition="500" :mouseDrag="true">
       <Slide v-for="slide in photoGallery" :key="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
@@ -91,7 +91,6 @@ const photoGallery = ref([
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap');
 @import '../assets/styles.scss';
 
-@media (min-width: 1024px) {
 .about {
   min-height: 100vh;
   color: $text-grey;
@@ -182,5 +181,67 @@ cursor: pointer;
   color: white;
 }
 }
+
+//----------Mobile-------------------------
+@media screen and ( max-width:480px) {
+.ourStory {
+  display: flex;
+  flex-direction: column;
 }
+
+.ourStory-img {
+  width: 300px;
+  height: 200px;
+  border-radius: 1rem;
+}
+
+.sliderPhoto {
+  border-radius: 1rem;
+}
+}
+
+.joinBtn {
+margin: auto;
+}
+
+//----------Mobile(iPhone SE) Landscape-----------------
+@media screen and (min-width:481px) and ( max-width:809px)  {
+  .ourStory{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ourStory-img {
+    margin-left: 10%;
+}
+}
+
+//----------Tablet & Mobile(iPhone11) Landscape------------------------------
+@media screen and (min-width:810px)  and ( max-width:1080px)  {
+  .ourStory{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ourStory-img {
+    width: 40rem;
+    height: 30rem;
+    border-radius: 1rem;
+    margin-left: 6%;
+}
+
+  .joinBtn {
+  margin-bottom: 1rem;;
+  }
+}
+
+//----------Tablet Landscape------------------------------
+@media screen and (min-width: 1080px)  {
+  .ourStory-img {
+    width: 50rem;
+    height: 40rem;
+}
+}
+
+
 </style>

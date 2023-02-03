@@ -15,7 +15,7 @@ defineProps<{
             </ul>
 
             <div>
-                <h3>Follow us!</h3>
+                <h3 class="footer-follow">Follow us!</h3>
                 <ul class="sms-icon">
                     <li><img src="../../public/images/instagram.svg" /></li>
                     <li><img src="../../public/images/facebook.svg" /></li>
@@ -102,6 +102,10 @@ h1{
     flex-direction:row
 }
 
+.footer-follow {
+    margin-top: 4rem;
+}
+
 .sms-icon {
     display: flex;
 }
@@ -109,6 +113,13 @@ h1{
 img {
     width: 2rem;
     height: 2rem;
+}
+}
+
+//----------Tablet Landscape------------------------------
+@media screen and (min-width: 1080px)  {
+    .footer-follow {
+    margin-top: 3rem;
 }
 }
 </style>
