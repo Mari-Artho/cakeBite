@@ -12,8 +12,10 @@ defineProps<{
                 <li>Address: Oishii street 1, Stockholm</li>
                 <li>Phone: 0123456789</li>
                 <li>Email: cafebite@daisuki.se</li>
+                <p>Logo is <a href="https://www.designevo.com/"
+                 title="free online logo maker">DesignEvo</a> by logo maker</p>
             </ul>
-
+            
             <div>
                 <h3 class="footer-follow">Follow us!</h3>
                 <ul class="sms-icon">
