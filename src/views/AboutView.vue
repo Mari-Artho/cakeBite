@@ -15,7 +15,7 @@ const photoGallery = ref([
                    text: "I live in a suburb, so I'm happy to be able to check a cafe in advance. I hope there will be more shops. So 4 stars.", 
                    stars:"⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user3.jpg",
-                    text: "I am raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. I go and cry if it's sold out! That's why I'm grateful for CakeBite.", stars:"⭐️⭐️⭐️⭐️⭐️"},
+                    text: "I'm a mother and raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. I go and cry if it's sold out! That's why I'm grateful for CakeBite.", stars:"⭐️⭐️⭐️⭐️⭐️"},
                   {photo:"../../public/images/user4.jpg",
                    text: "I Love CakeBite! Absolutely!", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
@@ -55,7 +55,7 @@ const photoGallery = ref([
     <!-- User's voice -->
     <h1 class="usersVoice">User's voice</h1>
 
-    <Carousel :itemsToShow="1.3" :wrapAround="true" :transition="500" :mouseDrag="true">
+    <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500" :mouseDrag="true">
       <Slide v-for="slide in photoGallery" :key="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
@@ -124,10 +124,19 @@ blockquote::after {
 }
 
 .ourStory-img {
-  width: 30rem;
-  height: 22rem;
+  width: 450px;
+  height: 350px;
   border-radius: 1rem;
   margin-top: 2rem;
+}
+
+.sliderPhoto {
+  background: $third-pink;
+  margin: 1rem;
+  margin-top: 0;
+  padding: 1rem;
+  border-radius: 10%;
+  width: 400px;
 }
 
 .carousel-item-img {
@@ -153,14 +162,6 @@ blockquote::after {
   margin: 0;
 }
 
-.sliderPhoto {
-  background: $third-pink;
-  margin: 1rem;
-  margin-top: 0;
-  padding: 1rem;
-  border-radius: 10%;
-}
-
 .howTo {
   width: 70%;
   margin: auto;
@@ -182,6 +183,7 @@ cursor: pointer;
 }
 }
 
+
 //----------Mobile-------------------------
 @media screen and ( max-width:480px) {
 .ourStory {
@@ -198,10 +200,11 @@ cursor: pointer;
 .sliderPhoto {
   border-radius: 1rem;
 }
-}
 
 .joinBtn {
 margin: auto;
+margin-bottom: 1rem;
+}
 }
 
 //----------Mobile(iPhone SE) Landscape-----------------
@@ -217,7 +220,7 @@ margin: auto;
 }
 
 //----------Tablet & Mobile(iPhone11) Landscape------------------------------
-@media screen and (min-width:810px)  and ( max-width:1080px)  {
+@media screen and (min-width:810px) and ( max-width:1020px)   {
 .ourStory{
   display: flex;
   flex-direction: column;
@@ -231,15 +234,7 @@ margin: auto;
 }
 
 .joinBtn {
-margin-bottom: 1rem;;
-}
-}
-
-//----------Tablet Landscape------------------------------
-@media screen and (min-width: 1080px)  {
-.ourStory-img {
-  width: 50rem;
-  height: 40rem;
+margin-bottom: 2rem;
 }
 }
 </style>

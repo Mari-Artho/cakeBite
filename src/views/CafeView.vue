@@ -31,8 +31,6 @@ getCakes();
               Home 
             </router-link>  > {{ $route.params.id }}.  {{cafe.cafeName}}
         </h3>
-        
-        <!-- <h1 class="cafeName">{{ $route.params.id }}.  {{cafe.cafeName}}</h1> -->
 
         <div class="cafeInfo">
             <div class="cafeInfo-left">
@@ -72,10 +70,10 @@ getCakes();
     font-family: $sub-font;
 }
 
-img{
+.cafeImage {
     width: 400px;
     height: 300px;
-    }
+}
 
 .cafeImage {
     border-radius: 40% 70% 0% 70%/ 60%;
@@ -112,6 +110,11 @@ ul {
 .cakeName {
     font-size: 1.5rem;
     font-family: $sub-font;
+}
+
+.cakeImg {
+    width: 300px;
+    height: 250px;
 }
 
 .sliceLeft {
