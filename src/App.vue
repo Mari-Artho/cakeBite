@@ -6,7 +6,7 @@ import Footer from './components/Footer.vue'
 
 <template>
   <section>
-    <div>
+    <div class="homeLayout">
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About CakeBite</RouterLink>
@@ -21,7 +21,7 @@ import Footer from './components/Footer.vue'
   </section>
 </template>
 
-<style  lang="scss">
+<style lang="scss">
 @import './assets/styles.scss';
 
 nav {
@@ -54,4 +54,20 @@ nav a:first-of-type {
   border: 0;
 }
 
+//----------Mobile-------------------------
+@media screen and ( max-width:480px) {
+    .homeLayout {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      a {
+        border-left: none;
+      }
+    }
+  }
 </style>

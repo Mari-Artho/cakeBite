@@ -6,12 +6,10 @@ defineProps<{
 
 <template>
     <section class="footer">
-        
-
         <div class="footer-layout">
             <ul class="contact">
-                <h1> Cake Bite</h1>
-                <li>Adress: Oishii street 1, Stockholm</li>
+                <h1 class="title"> Cake Bite</h1>
+                <li>Address: Oishii street 1, Stockholm</li>
                 <li>Phone: 0123456789</li>
                 <li>Email: cafebite@daisuki.se</li>
             </ul>
@@ -26,7 +24,6 @@ defineProps<{
                     <li><img src="../../public/images/youtube.svg" /></li>
                 </ul>
             </div>
-            
         </div>
     </section>
     
@@ -55,6 +52,11 @@ img {
 .contact {
     align-content: left;
 }
+
+.title {
+    text-align: center;
+    margin-right: 3rem;
+}
 .sms-icon {
     display: flex;
     margin-top: 7%;
@@ -68,5 +70,45 @@ li{
 
 h1{
     text-align: left;
+}
+
+//----------Mobile-------------------------
+@media screen and ( max-width:926px) {
+.footer {
+    text-align: center;
+}
+.footer-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.sms-icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+//----------Mobile Landscape:481px-760px(f.ex:GalaxyS10/iPhoneSE etc)--------
+@media screen and (min-width:481px) and ( max-width:760px) {
+.contact {
+    align-content: center;
+}
+}
+
+//----------Tablet------------------------------
+@media screen and (min-width:810px) and ( max-width:1080px) {
+.footer-layout {
+    display: flex;
+    flex-direction:row
+}
+
+.sms-icon {
+    display: flex;
+}
+
+img {
+    width: 2rem;
+    height: 2rem;
+}
 }
 </style>

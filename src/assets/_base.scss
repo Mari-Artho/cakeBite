@@ -24,14 +24,11 @@ body {
     }
   }
   
-  @media (min-width: 1024px) {
-    // body {
-    //   background-color: orange;
-    // }
+  @media (min-width: 360px) {
   
-    /* main.tsへと繋がっている */
+    /* connect to main.ts */
     #app {
-      padding: 0 2rem;
+      padding: 0.5 1rem;
       background-color: #FFF3DC;
       text-align: center;
     }

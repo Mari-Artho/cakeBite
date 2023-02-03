@@ -89,10 +89,6 @@ img{
     //background-color:white;
 }
 
-.cafeInfo-left{
-    //background-color: blue;
-}
-
 .cafeInfo-right{
     font-size: 1.2rem;
     margin-top: 1rem;

@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <img src="../../public/images/logo.png" alt="cafeBite logo"/>
+    <img src="../../public/images/logo.png" alt="CakeBite logo"/>
     <h1><span class="title">{{ msg }} </span><br/>How much cake left?</h1>
   </div>
 </template>
@@ -39,4 +39,29 @@ img {
   border-radius: 50%;
   padding: 1rem;
 }
+
+//----------Mobile-------------------------
+@media screen and ( max-width:926px) {
+    .greetings {
+      display: flex;
+      flex-direction: column-reverse;
+      border-radius: 5%;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      padding: 1rem;
+      margin: auto;
+   }
+
+   .title {
+      font-size: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
 </style>
