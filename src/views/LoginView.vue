@@ -204,10 +204,10 @@ img {
 label {
   text-align: left;
 }
-}
 
 ul {
   flex-direction: column;
+}
 }
 
 //----------Mobile(iPhone SE) Landscape-----------------
@@ -218,7 +218,7 @@ ul {
 }
 
 //----------Tablet & Mobile(iPhone11) Landscape------------------------------
-@media screen and (min-width:810px)  and ( max-width:1080px)  {
+@media screen and (min-width:810px)  and ( max-width: 1020px)  {
 ul {
   flex-direction: row;
 }

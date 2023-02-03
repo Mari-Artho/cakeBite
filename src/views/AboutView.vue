@@ -183,7 +183,6 @@ cursor: pointer;
 }
 }
 
-
 //----------Mobile-------------------------
 @media screen and ( max-width:480px) {
 .ourStory {
