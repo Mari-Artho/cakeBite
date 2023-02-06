@@ -30,11 +30,13 @@ app.get('/cakes/:id', cakesRouter);
 app.put('/cakes/:id/:slices', cakesRouter);//to update slice of cakes
 app.get('/login/:name/:password', loginRouter);
 
+require('dotenv').config();
+
 app.locals.con = mysql.createConnection({
     host: "localhost",
     port: "8889",
-    user: "cafe",
-    password: "cafe",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     database: "cafe"
 });
 console.log("Now running at localhost: " + app.locals.con.config.port);
