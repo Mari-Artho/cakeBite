@@ -19,11 +19,11 @@ defineProps<{
             <div>
                 <h3 class="footer-follow">Follow us!</h3>
                 <ul class="sms-icon">
-                    <li><img src="../../public/images/instagram.svg" /></li>
-                    <li><img src="../../public/images/facebook.svg" /></li>
-                    <li><img src="../../public/images/tiktok.svg" /></li>
-                    <li><img src="../../public/images/pinterest.svg" /></li>
-                    <li><img src="../../public/images/youtube.svg" /></li>
+                    <li><img src="/images/instagram.svg" /></li>
+                    <li><img src="/images/facebook.svg" /></li>
+                    <li><img src="/images/tiktok.svg" /></li>
+                    <li><img src="/images/pinterest.svg" /></li>
+                    <li><img src="/images/youtube.svg" /></li>
                 </ul>
             </div>
         </div>

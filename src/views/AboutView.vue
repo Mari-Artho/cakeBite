@@ -8,23 +8,23 @@ function joinBtn(){
 }
 
 const photoGallery = ref([
-                  {photo:"../../public/images/user1.jpg", 
+                  {photo:"/images/user1.jpg", 
                    text: "I'm busy working and taking care of my three children, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user2.jpg",
+                  {photo:"/images/user2.jpg",
                    text: "I live in a suburb, so I'm happy to be able to check a cafe in advance. I hope there will be more shops. So 4 stars.", 
                    stars:"⭐️⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user3.jpg",
+                  {photo:"/images/user3.jpg",
                     text: "I'm a mother and raising a child in Japan. And once in a while, the only thing I look forward to is eating matcha cake from Sakura Cafe. I go and cry if it's sold out! That's why I'm grateful for CakeBite.", stars:"⭐️⭐️⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user4.jpg",
+                  {photo:"/images/user4.jpg",
                    text: "I Love CakeBite! Absolutely!", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user5.jpg",
+                  {photo:"/images/user5.jpg",
                    text: "I'm a travel writer, so I'm always checking out trendy shops. That's why I want CakeBite to post shops around the world!", stars:"⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user6.jpg",
+                  {photo:"/images/user6.jpg",
                    text: "CakeBite? Damn good!", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
-                  {photo:"../../public/images/user7.jpg",
+                  {photo:"/images/user7.jpg",
                    text: "I'm vegan, so I always eat the same cake from the same cafe. That's why I love being able to check in advance on CakeBite.", 
                    stars:"⭐️⭐️⭐️⭐️⭐️"},
                   ])
@@ -48,7 +48,7 @@ const photoGallery = ref([
       </article>
       
       <article>
-        <img src="../../public/images/maria.jpg" alt="Maria's image" class="ourStory-img" />
+        <img src="/images/maria.jpg" alt="Maria's image" class="ourStory-img" />
       </article>
     </div>
 

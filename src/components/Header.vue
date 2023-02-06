@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <img src="../../public/images/logo.png" alt="CakeBite logo"/>
+    <img src="/images/logo.png" alt="CakeBite logo"/>
     <h1><span class="title">{{ msg }} </span><br/>How much cake left?</h1>
   </div>
 </template>

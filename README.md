@@ -45,13 +45,14 @@ backend : npm install mysql2
 
 backend : npm install cors
 
-npm start
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+backend : npm start
+
+frontend : npm run dev
 ```
 
 ### Type-Check, Compile and Minify for Production

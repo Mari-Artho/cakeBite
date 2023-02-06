@@ -1,8 +1,8 @@
-@charset "UTF-8";
 :root {
   --nav-padding-top: 2vh;
   --border-bottom: 1px dashed black;
   --margin-left: 25%;
+  --color-border: lightgrey ;
 }
 
 html {
@@ -24,17 +24,13 @@ body {
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(297deg, 67%, 80%, 0.2);
+    text-decoration: underline;
   }
 }
-@media (min-width: 1024px) {
-  body {
-    background-color: orange;
-    /* color:red; */
-  }
-  /* main.tsへと繋がっている */
+@media (min-width: 360px) {
+  /* connect to main.ts */
   #app {
-    padding: 0 2rem;
+    padding: 0.5 1rem;
     background-color: #FFF3DC;
     text-align: center;
   }
@@ -43,5 +39,6 @@ body {
   --nav-padding-top: 2vh;
   --border-bottom: 1px dashed black;
   --margin-left: 25%;
+  --color-border: lightgrey ;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

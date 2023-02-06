@@ -1,0 +1,2 @@
+:root{--nav-padding-top: 2vh;--border-bottom: 1px dashed black;--margin-left: 25%;--color-border: lightgrey }html{scroll-behavior:smooth}body{font-family:"Merriweather",serif;line-height:1.7;width:auto}#app{max-width:1280px;margin:0 auto;padding:2rem;font-weight:normal}@media(hover: hover){a:hover{text-decoration:underline}}@media(min-width: 360px){#app{padding:.5 1rem;background-color:#fff3dc;text-align:center}}:root{--nav-padding-top: 2vh;--border-bottom: 1px dashed black;--margin-left: 25%;--color-border: lightgrey }
+/*# sourceMappingURL=styles.min.css.map */
