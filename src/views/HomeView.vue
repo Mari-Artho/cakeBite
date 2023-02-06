@@ -6,7 +6,17 @@ import { RouterLink } from 'vue-router'
 const cafes = ref([]);
 
 const getCafes = async () => {
-  const response = await fetch('http://localhost:3001/cafes');
+  //const response = await fetch('http://localhost:3001/cafes');
+  
+  const response = await fetch('http://localhost:3001/cafes',{
+    // https://www.reddit.com/r/firefox/comments/5yhwob/fetch_api_not_working_in_firefox_addon/
+    mode: 'cors',
+    method: 'get',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+  });
+
   const cafeData = await response.json();
   cafes.value = cafeData;
 };
