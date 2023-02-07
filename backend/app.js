@@ -40,13 +40,16 @@ require('dotenv').config({ debug: true });
 // const dotenv = require('dotenv').config();
 // app.use(dotenv());
 
+const db_host = process.env.MYSQLHOST || "localhost";
+const db_port = process.env.MYSQLPORT || 8889;
+const db_user = process.env.MYSQLUSER;
+const db_password = process.env.MYSQLPASSWORD;
+
 app.locals.con = mysql.createConnection({
-    host: "localhost",
-    port: "8889",
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    //user: "cafe",
-    //password: "cafe",
+    host: db_host,
+    port: db_port,
+    user: db_user,
+    password: db_password,
     database: "cafe"
 });
 console.log("Now running at localhost: " + app.locals.con.config.port);
