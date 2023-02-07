@@ -31,7 +31,7 @@ app.get('/cakes/:id', cakesRouter);
 app.put('/cakes/:id/:slices', cakesRouter);//to update slice of cakes
 app.get('/login/:name/:password', loginRouter);
 
-//require('dotenv').config();
+const fs = require('fs')
 
 if (fs.existsSync('.env')) {
     require('dotenv').config({ debug: true });
