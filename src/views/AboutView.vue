@@ -7,6 +7,12 @@ function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
 }
 
+type galleryItem = {
+    photo: string;
+    text: string;
+    stars: string;
+}
+
 const photoGallery = ref([
                   {photo:"/images/user1.jpg", 
                    text: "I'm busy working and taking care of my three children, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
@@ -56,7 +62,7 @@ const photoGallery = ref([
     <h1 class="usersVoice">User's voice</h1>
 
     <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500" :mouseDrag="true">
-      <Slide v-for="slide in photoGallery" :key="slide">
+      <Slide v-for="slide in photoGallery" :key:galleryItem="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
           <p class="usersComment">{{ slide.text}}</p>
