@@ -34,7 +34,11 @@ app.get('/login/:name/:password', loginRouter);
 //require('dotenv').config();
 
 // test2
-require('dotenv').config({ debug: true });
+try {
+  require('dotenv').config({ debug: true });
+} catch {
+  console.log("No dotenv found.")
+}
 
 //test1
 // const dotenv = require('dotenv').config();
