@@ -33,12 +33,9 @@ app.get('/login/:name/:password', loginRouter);
 
 //require('dotenv').config();
 
-try {
-  require('dotenv').config({ debug: true });
-} catch {
-  console.log("No dotenv found.")
+if (fs.existsSync('.env')) {
+    require('dotenv').config({ debug: true });
 }
-
 //test1
 // const dotenv = require('dotenv').config();
 // app.use(dotenv());

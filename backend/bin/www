@@ -11,10 +11,10 @@ var http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-try {
+const fs = require('fs')
+
+if (fs.existsSync('.env')) {
   require('dotenv').config({ debug: true });
-} catch {
-  console.log("No dotenv found.")
 }
 var port = normalizePort(process.env.PORT || 3000);
 
