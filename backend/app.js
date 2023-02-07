@@ -33,7 +33,6 @@ app.get('/login/:name/:password', loginRouter);
 
 //require('dotenv').config();
 
-// test2
 try {
   require('dotenv').config({ debug: true });
 } catch {
