@@ -36,10 +36,8 @@ const fs = require('fs')
 if (fs.existsSync('.env')) {
     require('dotenv').config({ debug: true });
 }
-//test1
-// const dotenv = require('dotenv').config();
-// app.use(dotenv());
 
+const db_name = process.env.MYSQLDATABASE || "cafe"; // configure correct DB name (railway)
 const db_host = process.env.MYSQLHOST || "localhost";
 const db_port = process.env.MYSQLPORT || 8889;
 const db_user = process.env.MYSQLUSER;
@@ -50,7 +48,7 @@ app.locals.con = mysql.createConnection({
     port: db_port,
     user: db_user,
     password: db_password,
-    database: "cafe"
+    database: db_name
 });
 console.log("Now running at localhost: " + app.locals.con.config.port);
 
