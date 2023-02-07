@@ -4,6 +4,8 @@ This template should help get you started developing with Vue 3 in Vite.
 
 # Memo
 
+If MySQL crashes, you have to wait a bit before restarting it so the port is available again.
+
 The login password is written in MySQL. Password security is not considered in this project, so 
 it is a simple password.
 
@@ -50,7 +52,7 @@ backend : npm install dotenv --save
 ### Compile and Hot-Reload for Development
 
 ```sh
-backend : npm start
+backend : PORT=3001 npm start or　npm start
 
 frontend : npm run dev
 ```

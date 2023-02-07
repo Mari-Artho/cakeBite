@@ -3,14 +3,15 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
 //get data from mySql
-const cafes = ref([]);
+type cafe = { cafeId: number, cafeName: string, cafeImage: string };
+
+const cafes = ref<cafe[]>([]);
 
 const getCafes = async () => {
   //const response = await fetch('http://localhost:3001/cafes');
   
   const response = await fetch('http://localhost:3001/cafes',{
-    // https://www.reddit.com/r/firefox/comments/5yhwob/fetch_api_not_working_in_firefox_addon/
-    mode: 'cors',
+    //mode: 'cors',
     method: 'get',
     headers: {
         'Content-Type': 'application/json'

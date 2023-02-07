@@ -2,8 +2,10 @@
 import { ref } from 'vue'
 import axios from 'axios'
 
+type cake = { cakeId: number, cakeName: string, slicesLeft: number, imageURL: string };
+
 const admin = ref({name: "", password: "", cafeId: 0});
-const cakes = ref([]);
+const cakes = ref<cake[]>([]);
 
 //Get cakes
 const getCakes = async (cafeId: number) => {
@@ -78,7 +80,7 @@ const modalOpen = ()=> {
 
       <div class="cakeDetail">
         <ul v-for="cake in cakes" >
-          <li class="cakeList">{{cake.cakeName}}</li>
+          <li class="cakeList">{{ cake.cakeName }}</li>
           <li><img :src="`${cake.imageURL}`"/></li>
           <li class="cakeList">{{ cake.slicesLeft }} slices</li>
           <input class="input" type="number" id="numberCake" v-model.string="cake.slicesLeft"/>

@@ -3,7 +3,10 @@ import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 
 //get data from mySql
-const admins = ref([]);
+
+type admin = { adminId: number, adminName: string, cafeId: number };
+
+const admins = ref<admin[]>([]);
 
 const getAdmin = async () => {
   const response = await fetch('http://localhost:3001/admin');

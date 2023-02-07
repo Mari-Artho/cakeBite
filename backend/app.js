@@ -11,6 +11,7 @@ var cafesRouter = require('./routes/cafes');
 var cafeRouter1 = require('./routes/cafe');
 var cakesRouter = require('./routes/cakes');
 var loginRouter = require('./routes/login');
+const { config } = require('dotenv');
 
 var app = express();
 
@@ -30,13 +31,22 @@ app.get('/cakes/:id', cakesRouter);
 app.put('/cakes/:id/:slices', cakesRouter);//to update slice of cakes
 app.get('/login/:name/:password', loginRouter);
 
-require('dotenv').config();
+//require('dotenv').config();
+
+// test2
+require('dotenv').config({ debug: true });
+
+//test1
+// const dotenv = require('dotenv').config();
+// app.use(dotenv());
 
 app.locals.con = mysql.createConnection({
     host: "localhost",
     port: "8889",
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
+    //user: "cafe",
+    //password: "cafe",
     database: "cafe"
 });
 console.log("Now running at localhost: " + app.locals.con.config.port);
