@@ -3,15 +3,16 @@ import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
+//Join to us button.
 function joinBtn(){
     alert("Thank you! We will get back to you soon! ")
 }
 
-type galleryItem = {
-    photo: string;
-    text: string;
-    stars: string;
-}
+//Slide show/Carousel
+type galleryItem = { photo: string;
+                     text: string;
+                     stars: string;
+                   }
 
 const photoGallery = ref([
                   {photo:"/images/user1.jpg", 
@@ -61,7 +62,7 @@ const photoGallery = ref([
     <!-- User's voice -->
     <h1 class="usersVoice">User's voice</h1>
 
-    <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500" :mouseDrag="true">
+    <Carousel :itemsToShow="1.9" :wrapAround="true" :transition="500" :mouseDrag="true">
       <Slide v-for="slide in photoGallery" :key:galleryItem="slide">
         <div class="sliderPhoto">
           <img v-bind:src="slide.photo" class="carousel-item-img" />
