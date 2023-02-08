@@ -6,8 +6,8 @@ import Footer from './components/Footer.vue'
 
 <template>
   <section>
-    <div class="homeLayout">
-        <nav>
+    <div class="homeLayout" >
+        <nav id="global-nav">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About CakeBite</RouterLink>
           <RouterLink to="/login">Admin Login</RouterLink>
@@ -23,11 +23,9 @@ import Footer from './components/Footer.vue'
 
 <style lang="scss">
 @import './assets/styles.scss';
-
 nav {
   font-size: 1.2rem;
-  padding: 1rem 0;
-  margin-top: 1rem;
+  padding: .5rem 0;
   text-align: right;
   font-family: 'Aref Ruqaa Ink', serif;
 }
