@@ -8,8 +8,7 @@ const admin = ref({name: "", password: "", cafeId: 0});
 const cakes = ref<cake[]>([]);
 
 const backend = 'https://cakebite-production.up.railway.app';
-
-const host = process.env.HOST || "http://localhost:3001" || backend;
+const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
 //Get cakes
 const getCakes = async (cafeId: number) => {

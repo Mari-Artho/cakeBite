@@ -11,8 +11,7 @@ const cafe = ref<cafe>({cafeId: 0, cafeName: "", cafeImage: "", cafeAddress: "",
 const cakes = ref<cake[]>([]);
 
 const backend = 'https://cakebite-production.up.railway.app';
-
-const host = process.env.HOST || "http://localhost:3001" || backend;
+const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
 //Get a cafe data
 const getCafe = async () => {

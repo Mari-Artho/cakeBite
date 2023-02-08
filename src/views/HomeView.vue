@@ -8,8 +8,7 @@ type cafe = { cafeId: number, cafeName: string, cafeImage: string };
 const cafes = ref<cafe[]>([]);
 
 const backend = 'https://cakebite-production.up.railway.app';
-
-const host = process.env.HOST || "http://localhost:3001" || backend;
+const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
 const getCafes = async () => {
   const response = await fetch(`${host}/cafes`,{
