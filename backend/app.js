@@ -38,6 +38,7 @@ if (fs.existsSync('.env')) {
     require('dotenv').config({ override: true });
 }
 
+//ref:https://www.gimtec.io/articles/process-is-not-defined/
 const db_name = process.env.MYSQLDATABASE || "cafe"; // configure correct DB name (Railway)
 const db_host = process.env.MYSQLHOST || "localhost";
 const db_port = process.env.MYSQLPORT || 8889;

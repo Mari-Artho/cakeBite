@@ -13,7 +13,6 @@ const host = process.env.HOST || "http://localhost:3001" || backend;
 
 const getCafes = async () => {
   const response = await fetch(`${host}/cafes`,{
-    //mode: 'cors',
     method: 'get',
     headers: {
         'Content-Type': 'application/json'
