@@ -9,10 +9,6 @@ type admin = { adminId: string, adminName: string, cafeId: string };
 
 const admins = ref<admin[]>([]);
 
-//require('dotenv').config();
-//const { config } = require('dotenv');
-//const  config  = require('dotenv');
-
 const backend = 'https://cakebite-production.up.railway.app';
 const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 

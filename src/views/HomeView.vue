@@ -7,6 +7,7 @@ type cafe = { cafeId: number, cafeName: string, cafeImage: string };
 
 const cafes = ref<cafe[]>([]);
 
+//ref: https://vuejs.org/guide/best-practices/production-deployment.html
 const backend = 'https://cakebite-production.up.railway.app';
 const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
