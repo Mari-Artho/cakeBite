@@ -7,10 +7,12 @@ type cafe = { cafeId: number, cafeName: string, cafeImage: string };
 
 const cafes = ref<cafe[]>([]);
 
+const backend = 'https://cakebite-production.up.railway.app';
+
+const host = process.env.HOST || "http://localhost:3001" || backend;
+
 const getCafes = async () => {
-  //const response = await fetch('http://localhost:3001/cafes');
-  
-  const response = await fetch('http://localhost:3001/cafes',{
+  const response = await fetch(`${host}/cafes`,{
     //mode: 'cors',
     method: 'get',
     headers: {

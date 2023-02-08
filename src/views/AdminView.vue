@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+//import { RouterLink, RouterView } from 'vue-router'
 
 //get data from mySql
 
-type admin = { adminId: number, adminName: string, cafeId: number };
+// type admin = { adminId: number, adminName: string, cafeId: number };
+//Vite 環境変数 を string 以外で読み込めないかも知れないのでstringで。
+type admin = { adminId: string, adminName: string, cafeId: string };
 
 const admins = ref<admin[]>([]);
 
+//require('dotenv').config();
+
+const backend = 'https://cakebite-production.up.railway.app';
+const host = process.env.HOST || "http://localhost:3001" ||  backend;
+
 const getAdmin = async () => {
-  const response = await fetch('http://localhost:3001/admin');
+  const response = await fetch(`${host}/admin`);
   const adminData = await response.json();
   admins.value = adminData;
 };
@@ -34,7 +41,6 @@ getAdmin();
 @import '../assets/styles.scss';
 .admin {
     min-height: 150vh;
-    // background-color: rgb(245, 214, 181);
     background-color: rgb(137, 183, 137);
 }
 </style>

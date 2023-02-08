@@ -10,9 +10,13 @@ const route = useRoute();
 const cafe = ref<cafe>({cafeId: 0, cafeName: "", cafeImage: "", cafeAddress: "", openhourWeekday: "", openhourWeekend:""});
 const cakes = ref<cake[]>([]);
 
+const backend = 'https://cakebite-production.up.railway.app';
+
+const host = process.env.HOST || "http://localhost:3001" || backend;
+
 //Get a cafe data
 const getCafe = async () => {
-  const response = await fetch('http://localhost:3001/cafe/'+ route.params.id);
+  const response = await fetch(`${host}/cafe/${route.params.id}`);
   const cafeData = await response.json();
   cafe.value = cafeData[0];
 };
@@ -20,7 +24,7 @@ getCafe();
 
 //Get a cake data
 const getCakes = async () => {
-  const response = await fetch('http://localhost:3001/cakes/'+ route.params.id);
+  const response = await fetch(`${host}/cakes/${route.params.id}`);
   const cakeData = await response.json();
   cakes.value = cakeData;
 };

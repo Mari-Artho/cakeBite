@@ -7,16 +7,20 @@ type cake = { cakeId: number, cakeName: string, slicesLeft: number, imageURL: st
 const admin = ref({name: "", password: "", cafeId: 0});
 const cakes = ref<cake[]>([]);
 
+const backend = 'https://cakebite-production.up.railway.app';
+
+const host = process.env.HOST || "http://localhost:3001" || backend;
+
 //Get cakes
 const getCakes = async (cafeId: number) => {
-  const response = await fetch('http://localhost:3001/cakes/'+ cafeId);
+  const response = await fetch(`${host}/cakes/${cafeId}`);
   const cakeData = await response.json();
   cakes.value = cakeData;
 };
 
 //Log in
 const getLogin = async (name: string, password: string) => {
-  const response = await fetch('http://localhost:3001/login/' + name + '/' + password);
+  const response = await fetch(`${host}/login/${name}/${password}`);
   const adminData = await response.json();
   if (adminData.cafeId == 0) {
     alert ("Invalid login.");
@@ -40,7 +44,7 @@ const updateCakes = (cakeId: number, slicesLeft: number) => {
         alert("Slices left has to be at least 0.");
         return;
       }
-      axios.put(`http://localhost:3001/cakes/${cakeId}/${slicesLeft}`)  
+      axios.put(`${host}/cakes/${cakeId}/${slicesLeft}`)  
       .then(response => {
           console.log(`update cake ${cakeId} to ${slicesLeft}!`)
       })

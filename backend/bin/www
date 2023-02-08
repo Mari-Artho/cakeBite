@@ -13,8 +13,9 @@ var http = require('http');
  */
 const fs = require('fs')
 
+//for deploy by Railways.
 if (fs.existsSync('.env')) {
-  require('dotenv').config({ debug: true });
+  require('dotenv').config({ override: true });
 }
 var port = normalizePort(process.env.PORT || 3000);
 

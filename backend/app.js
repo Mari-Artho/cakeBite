@@ -26,18 +26,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/cafes', cafesRouter);
-app.get('/cafe/:id', cafeRouter1); // need to use app.get to receive params
+app.get('/cafe/:id', cafeRouter1); // need to use "app.get" to receive params
 app.get('/cakes/:id', cakesRouter);
 app.put('/cakes/:id/:slices', cakesRouter);//to update slice of cakes
 app.get('/login/:name/:password', loginRouter);
 
 const fs = require('fs')
 
+//for deploy by Railway
 if (fs.existsSync('.env')) {
-    require('dotenv').config({ debug: true });
+    require('dotenv').config({ override: true });
 }
 
-const db_name = process.env.MYSQLDATABASE || "cafe"; // configure correct DB name (railway)
+const db_name = process.env.MYSQLDATABASE || "cafe"; // configure correct DB name (Railway)
 const db_host = process.env.MYSQLHOST || "localhost";
 const db_port = process.env.MYSQLPORT || 8889;
 const db_user = process.env.MYSQLUSER;
