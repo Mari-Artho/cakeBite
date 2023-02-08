@@ -88,7 +88,7 @@ img {
 }
 
 //----------Mobile-------------------------
-@media screen and ( max-width:480px) {
+@media screen and ( max-width: 600px) {
 .home {
   text-align: center;
 }
@@ -101,7 +101,7 @@ img {
 }
 
 //----------Mobile Landscape-----------------
-@media screen and (min-width:481px) and ( max-width:809px) {
+@media screen and (min-width: 601px) and ( max-width:809px) {
  .cafeList {
   display: grid;
   grid-template-columns: 1fr 1fr;
