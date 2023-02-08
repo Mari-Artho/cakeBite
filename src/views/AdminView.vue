@@ -10,9 +10,13 @@ type admin = { adminId: string, adminName: string, cafeId: string };
 const admins = ref<admin[]>([]);
 
 //require('dotenv').config();
+//const { config } = require('dotenv');
+//const  config  = require('dotenv');
 
 const backend = 'https://cakebite-production.up.railway.app';
-const host = process.env.HOST || "http://localhost:3001" ||  backend;
+// const host = process.env.HOST || "http://localhost:3001" ||  backend;
+const host =  "http://localhost:3001" ||  backend;
+
 
 const getAdmin = async () => {
   const response = await fetch(`${host}/admin`);

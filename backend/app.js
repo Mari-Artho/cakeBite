@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mysql = require("mysql2");
 const cors = require('cors');
+const { config } = require('dotenv');
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
@@ -11,7 +12,6 @@ var cafesRouter = require('./routes/cafes');
 var cafeRouter1 = require('./routes/cafe');
 var cakesRouter = require('./routes/cakes');
 var loginRouter = require('./routes/login');
-const { config } = require('dotenv');
 
 var app = express();
 
