@@ -28,13 +28,23 @@ user name: Mrs.Cake     password: mrs
 
 ## Construction
 
-front end framework is Vue, the backend is express, and the database is mySQL.
+Frontend framework: Vue.js
 
-Deployment uses Netlify for the front and Railway for the backend.
+Backackend: Node.js (framework: Express)
+
+Database: MySQL
+
+Deployment: 
+[Netlify](https://www.netlify.com/)(frontend)
+
+[Railway](https://railway.app/)(backend)
 	
+Link:
 [Link to CakeBite](https://cakebite1.netlify.app/) 
 
 [Link to Backend](https://cakebite-production.up.railway.app/cafes) 
+
+[Link to GitHub repo](https://github.com/Mari-Artho/cakeBite) 
 
 ## Notice
 
