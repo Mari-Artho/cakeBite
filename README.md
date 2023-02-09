@@ -35,11 +35,10 @@ Backackend: Node.js (framework: Express)
 Database: MySQL
 
 Deployment: 
-[Netlify](https://www.netlify.com/)(frontend)
-
-[Railway](https://railway.app/)(backend)
+[Netlify](https://www.netlify.com/)(frontend) and [Railway](https://railway.app/)(backend)
 	
 Link:
+
 [Link to CakeBite](https://cakebite1.netlify.app/) 
 
 [Link to Backend](https://cakebite-production.up.railway.app/cafes) 
