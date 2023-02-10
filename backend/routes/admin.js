@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET an admin data. */
 router.get('/', function(req, res) {
   res.setHeader('content-type', 'application/json; charset=utf-8');
   req.app.locals.con.connect(function(err){

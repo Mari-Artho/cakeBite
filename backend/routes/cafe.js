@@ -5,7 +5,7 @@ const mysql = require('mysql2');
 
 console.log("Now running cafe.js");
 
-/* GET users listing. */
+/* GET a selected cafe data. */
 router.get('/cafe/:id', function(req, res) {
   let con = req.app.locals.con;
   res.setHeader('content-type', 'application/json; charset=utf-8');

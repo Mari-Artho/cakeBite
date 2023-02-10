@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-//get data from mySql
-
-// type admin = { adminId: number, adminName: string, cafeId: number };
-//Vite 環境変数 を string 以外で読み込めないかも知れないのでstringで。
 type admin = { adminId: string, adminName: string, cafeId: string };
-
 const admins = ref<admin[]>([]);
 
+//To deploy with Railway
 const backend = 'https://cakebite-production.up.railway.app';
+
+//Check deploy or development
 const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
+//getAdmin data
 const getAdmin = async () => {
   const response = await fetch(`${host}/admin`);
   const adminData = await response.json();

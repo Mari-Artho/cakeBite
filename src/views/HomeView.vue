@@ -2,8 +2,11 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
-//get data from mySql
-type cafe = { cafeId: number, cafeName: string, cafeImage: string };
+//get a data from mySql
+type cafe = { cafeId: number, 
+              cafeName: string, 
+              cafeImage: string 
+            };
 
 const cafes = ref<cafe[]>([]);
 

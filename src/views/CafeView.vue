@@ -2,14 +2,31 @@
 import { ref } from 'vue'
 import { useRoute, RouterLink} from "vue-router"
 
-type cafe = { cafeId: number, cafeName: string, cafeImage: string, cafeAddress: string, openhourWeekday: string, openhourWeekend: string };
-type cake = { cakeId: number, cakeName: string, slicesLeft: number, imageURL: string };
-
+//To deploy with Railway
+type cafe = { cafeId: number,
+              cafeName: string, 
+              cafeImage: string, 
+              cafeAddress: string, 
+              openhourWeekday: string, 
+              openhourWeekend: string 
+            };
+type cake = { cakeId: number, 
+              cakeName: string, 
+              slicesLeft: number, 
+              imageURL: string 
+            };
 
 const route = useRoute();
-const cafe = ref<cafe>({cafeId: 0, cafeName: "", cafeImage: "", cafeAddress: "", openhourWeekday: "", openhourWeekend:""});
+const cafe = ref<cafe>({cafeId: 0, 
+                        cafeName: "", 
+                        cafeImage: "", 
+                        cafeAddress: "", 
+                        openhourWeekday: "", 
+                        openhourWeekend:""
+                       });
 const cakes = ref<cake[]>([]);
 
+//To deploy with Railway
 const backend = 'https://cakebite-production.up.railway.app';
 const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 

@@ -26,7 +26,7 @@ user name: Mrs.Cake     password: mrs
 
 ```
 
-## Construction
+## Architecture
 
 Frontend framework: Vue.js
 

@@ -2,15 +2,20 @@
 import { ref } from 'vue'
 import axios from 'axios'
 
-type cake = { cakeId: number, cakeName: string, slicesLeft: number, imageURL: string };
+type cake = { cakeId: number, 
+              cakeName: string, 
+              slicesLeft: number, 
+              imageURL: string 
+            };
 
 const admin = ref({name: "", password: "", cafeId: 0});
 const cakes = ref<cake[]>([]);
 
+//To deploy with Railway
 const backend = 'https://cakebite-production.up.railway.app';
 const host = (process.env.NODE_ENV == "production") ? backend : "http://localhost:3001";
 
-//Get cakes
+//Get cakes by cafeId
 const getCakes = async (cafeId: number) => {
   const response = await fetch(`${host}/cakes/${cafeId}`);
   const cakeData = await response.json();

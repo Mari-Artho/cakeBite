@@ -14,6 +14,7 @@ type galleryItem = { photo: string;
                      stars: string;
                    }
 
+//Slide show/Carousel
 const photoGallery = ref([
                   {photo:"/images/user1.jpg", 
                    text: "I'm busy working and taking care of my three children, so it's very helpful to have a CakeBite where I can check the inventory. I'm always checking it!",
