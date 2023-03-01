@@ -51,12 +51,9 @@ This template should help get you started developing with Vue 3 in Vite.
 
 If MySQL crashes, you have to wait a bit before restarting it so the port is available again.
 
-```sh
 Since I am deploying with railway free plan, the backend cannot be used from the 20th to the end of the month. 
 
 Therefore, the page will be different from usual during that period.
-
-```
 
 
 ## Project Setup
