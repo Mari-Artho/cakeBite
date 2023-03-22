@@ -41,12 +41,11 @@ Deployment:
 😌The link below is hidden due to the end of the Railway free plan.
 
 😊But the frontend shows the parts that are not related to the backend/server.
+```
 
 [Link to frontend](https://cakebite1.netlify.app/)
 
 [Link to backend](https://cakebite-production.up.railway.app/cafes)
-
-```
 
 ## Notice
 
