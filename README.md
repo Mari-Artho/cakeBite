@@ -34,16 +34,19 @@ Backackend: Node.js (framework: Express)
 
 Database: MySQL
 
-Deployment: 
+Deployment:
 [Netlify](https://www.netlify.com/)(frontend) and [Railway](https://railway.app/)(backend)
-	
-Link:
 
-[Link to CakeBite](https://cakebite1.netlify.app/) 
+```sh
+😌The link below is hidden due to the end of the Railway free plan.
 
-[Link to Backend](https://cakebite-production.up.railway.app/cafes) 
+😊But the frontend shows the parts that are not related to the backend/server.
 
-[Link to GitHub repo](https://github.com/Mari-Artho/cakeBite) 
+[Link to frontend](https://cakebite1.netlify.app/)
+
+[Link to backend](https://cakebite-production.up.railway.app/cafes)
+
+```
 
 ## Notice
 
@@ -51,10 +54,9 @@ This template should help get you started developing with Vue 3 in Vite.
 
 If MySQL crashes, you have to wait a bit before restarting it so the port is available again.
 
-Since I am deploying with railway free plan, the backend cannot be used from the 20th to the end of the month. 
+Since I am deploying with railway free plan, the backend cannot be used from the 20th to the end of the month.
 
 Therefore, the page will be different from usual during that period.
-
 
 ## Project Setup
 
