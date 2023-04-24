@@ -8,6 +8,10 @@ The contracted café owner can log in from Admin, enter the increase or decrease
 
 In the future, the cafe's cash register and database will be linked, and the cash register data will be automatically sent to the backend. In other words, the owner logs in and increases the inventory only when the cake is made.
 
+## Demo
+
+[CakeBite: Youtube](https://youtu.be/yYsH0FoCzNM)
+
 ## Admin login
 
 The password is the first letter of the cafe name converted to lowercase.
