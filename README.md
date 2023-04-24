@@ -12,6 +12,8 @@ In the future, the cafe's cash register and database will be linked, and the cas
 
 [CakeBite: Youtube](https://youtu.be/yYsH0FoCzNM)
 
+![CakeBite Image](images/homeScreen.png)
+
 ## Admin login
 
 The password is the first letter of the cafe name converted to lowercase.
