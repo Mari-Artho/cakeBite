@@ -45,13 +45,17 @@ const db_port = process.env.MYSQLPORT || 8889;
 const db_user = process.env.MYSQLUSER;
 const db_password = process.env.MYSQLPASSWORD;
 
-app.locals.con = mysql.createConnection({
-  host: db_host,
-  port: db_port,
-  user: db_user,
-  password: db_password,
-  database: db_name,
-});
+if (process.env.JAWSDB_URL) {
+  app.locals.con = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  app.locals.con = mysql.createConnection({
+    host: db_host,
+    port: db_port,
+    user: db_user,
+    password: db_password,
+    database: db_name,
+  });
+}
 console.log("Now running at localhost: " + app.locals.con.config.port);
 
 module.exports = app;
