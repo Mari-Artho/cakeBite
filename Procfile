@@ -1,2 +1,2 @@
-web: npm i && vite
-server: cd backend && npm i && npm start
+web: vite
+server: cd backend && npm start
