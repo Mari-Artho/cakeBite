@@ -75,7 +75,7 @@ backend : npm install cors
 ### Compile and Hot-Reload for Development
 
 ```sh
-backend : PORT=3001 npm start or　npm start
+backend : MYSQLPORT=3306 PORT=3001 npm start or　npm start
 
 frontend : npm run dev
 ```
